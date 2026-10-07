@@ -1,30 +1,31 @@
-# 🌐 Free Web Hosting & Deployment Services
+# 🌐 Free Web Hosting & Deployment Guide
 
-A curated list of **free web hosting, static hosting, serverless platforms, developer platforms, and no-code builders**.
+A curated guide to **free web hosting, static hosting, serverless platforms, developer platforms, and no-code website builders**.
 
 > **Last checked: October 2026**
 >
-> ⚠️ "Free" does not always mean the same thing. Some services provide traditional PHP/MySQL hosting, while others are designed for static websites, serverless applications, APIs, or no-code development.
+> ⚠️ Free does not always mean the same thing. Some platforms provide traditional **PHP + MySQL hosting**, while others are designed for **static websites, serverless applications, APIs, or no-code development**.
 
 ---
 
 ## 🚀 Quick Choice
 
-| What are you building?          | Best choices                                                                                                               |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| 🛒 WordPress / WooCommerce      | [InfinityFree](https://www.infinityfree.com/) · [Byet.host](https://byet.host/)                                            |
-| 🐘 PHP + MySQL                  | [Byet.host](https://byet.host/) · [InfinityFree](https://www.infinityfree.com/) · [HelioHost](https://www.heliohost.org/)  |
-| 🐍 Python / Django              | [Render](https://render.com/) · [HelioHost](https://www.heliohost.org/)                                                    |
-| 🟢 Node.js backend              | [Render](https://render.com/) · [Koyeb](https://www.koyeb.com/) · [Deno Deploy](https://deno.com/deploy)                   |
-| ⚡ Serverless API                | [Cloudflare Workers](https://workers.cloudflare.com/) · [Deno Deploy](https://deno.com/deploy)                             |
-| ⚛️ Next.js                      | [Vercel](https://vercel.com/)                                                                                              |
-| 🎨 React / Vue / Astro          | [Cloudflare Pages](https://pages.cloudflare.com/) · [Netlify](https://www.netlify.com/)                                    |
-| 📄 Plain HTML/CSS/JS            | [GitHub Pages](https://pages.github.com/) · [Cloudflare Pages](https://pages.cloudflare.com/) · [Surge](https://surge.sh/) |
-| 📚 Documentation                | [Read the Docs](https://readthedocs.org/) · [GitHub Pages](https://pages.github.com/)                                      |
-| 🎨 Personal / artistic website  | [Neocities](https://neocities.org/)                                                                                        |
-| 🧩 No-code web application      | [Bubble](https://bubble.io/)                                                                                               |
-| 🖥️ Local website sharing       | [Fenix Web Server](https://preview.fenixwebserver.com/)                                                                    |
-| 📦 Open-source software hosting | [SourceForge](https://sourceforge.net/)                                                                                    |
+| What are you building?         | Best choices                                                                                                                           |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| 🛒 WordPress / WooCommerce     | **[InfinityFree](https://www.infinityfree.com/)** · **[Byet.host](https://byet.host/)**                                                |
+| 🐘 PHP + MySQL                 | **[Byet.host](https://byet.host/)** · **[InfinityFree](https://www.infinityfree.com/)** · **[HelioHost](https://www.heliohost.org/)**  |
+| 🐍 Python / Django             | **[Render](https://render.com/)** · **[HelioHost](https://www.heliohost.org/)**                                                        |
+| 🟢 Node.js backend             | **[Render](https://render.com/)** · **[Koyeb](https://www.koyeb.com/)** · **[Deno Deploy](https://deno.com/deploy)**                   |
+| ⚡ Serverless API               | **[Cloudflare Workers](https://workers.cloudflare.com/)** · **[Deno Deploy](https://deno.com/deploy)**                                 |
+| ⚛️ Next.js                     | **[Vercel](https://vercel.com/)**                                                                                                      |
+| 🎨 React / Vue / Astro         | **[Cloudflare Pages](https://pages.cloudflare.com/)** · **[Netlify](https://www.netlify.com/)**                                        |
+| 📄 Plain HTML/CSS/JS           | **[GitHub Pages](https://pages.github.com/)** · **[Cloudflare Pages](https://pages.cloudflare.com/)** · **[Surge](https://surge.sh/)** |
+| 🎭 Personal / artistic website | **[Neocities](https://neocities.org/)**                                                                                                |
+| 🧩 No-code application         | **[Bubble](https://bubble.io/)**                                                                                                       |
+| 🎨 Landing page                | **[Tilda](https://tilda.cc/)** · **[Netlify](https://www.netlify.com/)**                                                               |
+| 📚 Documentation               | **[Read the Docs](https://readthedocs.org/)** · **[GitHub Pages](https://pages.github.com/)**                                          |
+| 📦 Open-source software        | **[SourceForge](https://sourceforge.net/)**                                                                                            |
+| 🖥️ Share a local website      | **[Fenix Web Server](https://preview.fenixwebserver.com/)**                                                                            |
 
 ---
 
@@ -37,22 +38,26 @@ These are the strongest choices for **modern web development**.
 ## 1. [Cloudflare Workers](https://workers.cloudflare.com/) ⭐⭐⭐⭐⭐
 
 **Best for:**
-APIs, serverless backends, webhooks, authentication services, edge applications and lightweight web applications.
+APIs, webhooks, authentication services, serverless backends, edge applications and lightweight web apps.
 
 **✨ Brilliant features:**
 
-* Runs code at Cloudflare's edge
+* Runs code on Cloudflare's edge network
 * Automatic scaling
 * No traditional server management
 * JavaScript / TypeScript
-* Excellent for APIs
+* Excellent API platform
 * Integrates with Cloudflare D1, KV, R2 and other services
-* Free plan currently includes **100,000 requests/day**
-* Up to 100 Workers per account on the Free plan
+* Free plan currently includes **100,000 requests per day**
+
+**💡 Why it stands out:**
+You can build a real backend without renting or managing a traditional server.
 
 **Think of it as:**
 
-`Backend without managing a server`
+```text
+Backend without managing a server
+```
 
 **Not for:** Traditional WordPress/PHP hosting.
 
@@ -61,7 +66,7 @@ APIs, serverless backends, webhooks, authentication services, edge applications 
 ## 2. [Cloudflare Pages](https://pages.cloudflare.com/) ⭐⭐⭐⭐⭐
 
 **Best for:**
-React, Vue, Astro, Hugo, static websites, portfolios, blogs, documentation and modern frontend applications.
+React, Vue, Astro, Hugo, blogs, documentation, portfolios and static websites.
 
 **✨ Brilliant features:**
 
@@ -72,43 +77,51 @@ React, Vue, Astro, Hugo, static websites, portfolios, blogs, documentation and m
 * HTTPS
 * CDN
 * Pages Functions
-* Can evolve from static hosting into a serverless application
+* Easy path from static site to serverless application
+* Static asset requests are free and unlimited
+
+**💡 Why it stands out:**
+You can start with plain HTML and later add backend functionality without changing platforms.
 
 **Think of it as:**
 
-`Static hosting + global CDN + serverless`
+```text
+Static hosting + CDN + serverless
+```
 
 ---
 
 ## 3. [Vercel](https://vercel.com/) ⭐⭐⭐⭐⭐
 
 **Best for:**
-Next.js, React, modern SaaS applications and server-rendered web applications.
+Next.js, React, modern SaaS applications and server-rendered applications.
 
 **✨ Brilliant features:**
 
 * Excellent Next.js integration
-* Git-based deployment
-* Automatic preview environments
+* Automatic CI/CD
+* Git deployment
+* Preview deployments
 * Global CDN
-* HTTPS
-* Serverless Functions
-* Extremely easy deployment workflow
+* Web Application Firewall
+* DDoS mitigation
+* Serverless/Fluid Compute
 
-**Think of it as:**
+**💡 Why it stands out:**
+For a Next.js project, the deployment workflow is exceptionally smooth.
 
-`The natural home of Next.js`
+**Important:** The Hobby plan is intended for **personal or non-commercial use**.
 
 ---
 
 ## 4. [Render](https://render.com/) ⭐⭐⭐⭐⭐
 
 **Best for:**
-Full-stack prototypes, APIs, Node.js, Python, web services and hobby projects.
+Full-stack prototypes, APIs, Node.js applications, Python applications and backend experiments.
 
 **✨ Brilliant features:**
 
-* Static websites
+* Static sites
 * Web services
 * APIs
 * PostgreSQL
@@ -118,81 +131,79 @@ Full-stack prototypes, APIs, Node.js, Python, web services and hobby projects.
 * Custom domains
 * HTTPS
 
-The Free tier is explicitly aimed at **testing, hobby projects and experimentation**, not production workloads. Free PostgreSQL databases expire after 30 days. ([Render Free Services](https://render.com/docs/free))
+**💡 Why it stands out:**
+You can experiment with a complete frontend/backend architecture in one platform.
 
-**Think of it as:**
-
-`A free playground for a complete full-stack application`
+**Important:** Free services have important limitations and are intended for **testing, hobby projects and experimentation**, not production. Free Render Postgres databases expire after 30 days.
 
 ---
 
 ## 5. [Netlify](https://www.netlify.com/) ⭐⭐⭐⭐⭐
 
 **Best for:**
-Frontend applications, static websites, Jamstack projects, landing pages and serverless websites.
+Frontend applications, static sites, Jamstack projects, landing pages and lightweight serverless applications.
 
 **✨ Brilliant features:**
 
 * Git deployment
-* CDN
+* Global CDN
 * HTTPS
 * Custom domains
 * Deploy previews
-* Serverless Functions
+* Functions
 * Forms
-* Modern frontend workflow
-* Free tier with monthly usage limits
+* AI integrations
+* Database and Blob storage
+* **300 credits/month** on the current Free plan
 
-**Think of it as:**
+**💡 Why it stands out:**
+A very polished platform for frontend developers.
 
-`An all-in-one frontend deployment platform`
+**Important:** Free projects stop when the monthly credit limit is reached.
 
 ---
 
 ## 6. [Deno Deploy](https://deno.com/deploy) ⭐⭐⭐⭐⭐
 
 **Best for:**
-TypeScript, JavaScript APIs, edge applications and lightweight backend services.
+JavaScript/TypeScript APIs, edge applications and lightweight backend services.
 
 **✨ Brilliant features:**
 
 * Edge execution
 * Native Deno runtime
-* TypeScript-friendly
+* Excellent TypeScript support
 * Serverless architecture
 * Custom domains
-* Free tier currently includes **1 million requests/month**
-* 20 GiB monthly egress
-* Up to 5 custom domains
+* **1 million requests/month**
+* **20 GiB monthly egress**
 
-**Think of it as:**
-
-`A TypeScript-friendly edge platform`
+**💡 Why it stands out:**
+A particularly attractive choice for TypeScript developers.
 
 ---
 
 ## 7. [Firebase Hosting](https://firebase.google.com/docs/hosting/) ⭐⭐⭐⭐⭐
 
 **Best for:**
-SPAs, PWAs, mobile-app companion websites and applications using the Firebase ecosystem.
+SPAs, PWAs, mobile-app companion sites and projects using the Firebase ecosystem.
 
 **✨ Brilliant features:**
 
-* Google's global infrastructure
-* CDN
+* Google's infrastructure
+* Global CDN
 * Automatic SSL
 * Custom domains
 * Preview environments
 * Rollbacks
 * Firebase Authentication
-* Firebase databases
+* Realtime Database / Firestore
 * Cloud Functions integration
 
-Free Hosting currently includes up to **10 GB of Hosting storage**. ([Firebase Hosting pricing](https://firebase.google.com/docs/hosting/usage-quotas-pricing))
+**💡 Why it stands out:**
+Hosting can become part of a complete application platform.
 
-**Think of it as:**
-
-`Frontend + Google backend ecosystem`
+The no-cost Hosting quota currently includes up to **10 GB of Hosting storage**.
 
 ---
 
@@ -203,22 +214,33 @@ Small APIs, Docker applications, webhooks, bots and backend experiments.
 
 **✨ Brilliant features:**
 
-* Container-oriented deployment
-* Git deployment
-* HTTPS
-* Global infrastructure
-* Small Free Instance
-* Useful for testing real backend applications
+* Docker support
+* Git-driven deployment
+* Web services
+* APIs
+* Global edge network
+* Native TLS
+* Custom domains
 
-The Free Instance is currently **512 MB RAM, 0.1 vCPU and 2 GB SSD**.
+The Free Instance currently provides:
+
+```text
+512 MB RAM
+0.1 vCPU
+2 GB SSD
+```
+
+Only one Free Instance is available per organization, and it scales down to zero after one hour without traffic.
 
 ---
 
 # 🥇 Tier A — Traditional Free PHP Hosting
 
-Choose this category when you need:
+Choose this category when you specifically need:
 
-`PHP + MySQL + FTP + Control Panel + WordPress`
+```text
+PHP + MySQL + FTP + Control Panel + WordPress
+```
 
 ---
 
@@ -229,52 +251,64 @@ WordPress, PHP websites, blogs, forums, small business websites and CMS experime
 
 **✨ Brilliant features:**
 
-* 5 GB storage
+* **5 GB disk space**
+* Unlimited bandwidth
 * PHP 8.4
 * MySQL 8 / MariaDB 11.4
-* SSL
+* Free SSL
+* Free subdomains
 * Custom domains
 * FTP
+* File Manager
 * WordPress support
 * Softaculous
+* Full `.htaccess` support
 * No expiration
-* No forced advertisements
 
-**Best traditional Free Hosting choice for WordPress.**
+**💡 Why it stands out:**
+Probably the strongest choice in this list when the goal is simply:
 
-**Think of it as:**
-
-`A real free shared host for WordPress`
+```text
+"I need a real free PHP/MySQL host."
+```
 
 ---
 
 ## 10. [Byet.host](https://byet.host/) ⭐⭐⭐⭐⭐
 
 **Best for:**
-WordPress, Joomla, Drupal, OpenCart, phpBB, MediaWiki and traditional PHP websites.
+WordPress, Joomla, Drupal, OpenCart, phpBB, MediaWiki and other traditional PHP applications.
 
 **✨ Brilliant features:**
 
-* 5 GB NVMe storage
+* **5 GB NVMe storage**
 * Unlimited bandwidth
 * PHP 8.3
-* MySQL 8
-* Free SSL
+* MySQL 8 / MariaDB 11.4
+* SSL
 * FTP
 * VistaPanel
 * Softaculous
-* 400+ applications
-* No advertisements
+* 400+ one-click applications
+* Custom domains
+* No forced ads
 * No expiration
 
-**Best choice for a feature-rich free traditional hosting account.**
+**💡 Why it stands out:**
+It offers an unusually rich traditional hosting stack for a $0 plan.
+
+**Think of it as:**
+
+```text
+Free shared hosting with a surprisingly complete feature set
+```
 
 ---
 
 ## 11. [HelioHost](https://www.heliohost.org/) ⭐⭐⭐⭐½
 
 **Best for:**
-Developers who need something beyond standard PHP hosting.
+Developers who need more than ordinary PHP hosting.
 
 **✨ Brilliant features:**
 
@@ -286,18 +320,17 @@ Developers who need something beyond standard PHP hosting.
 * Ruby
 * Perl
 * Multiple database technologies
-* Community-powered hosting
+* Community-powered infrastructure
 
-**Think of it as:**
-
-`Free hosting for developers who want multiple technologies`
+**💡 Why it stands out:**
+Much broader technology support than the typical free PHP host.
 
 ---
 
 ## 12. [AlwaysData](https://www.alwaysdata.com/) ⭐⭐⭐⭐
 
 **Best for:**
-Personal technical projects and experiments involving unusual technology stacks.
+Personal technical projects and experiments using different languages and databases.
 
 **✨ Brilliant features:**
 
@@ -310,285 +343,267 @@ Personal technical projects and experiments involving unusual technology stacks.
 * MySQL/MariaDB
 * PostgreSQL
 * SSH/SFTP
-* 1 GB free storage
+* 1 GB SSD storage
+* 256 MB RAM
+* 1/4 CPU
+* 3-day backups
 
-The Free plan is intended for personal/non-commercial usage.
+**Important:** The Free plan is for **personal, non-profit use** and is restricted compared with paid plans.
 
 ---
 
 ## 13. [AwardSpace](https://www.awardspace.com/) ⭐⭐⭐½
 
 **Best for:**
-Small blogs, personal sites, HTML/PHP projects and small WordPress experiments.
+Small PHP websites, student projects, blogs and basic WordPress experiments.
 
 **✨ Brilliant features:**
 
-* PHP
-* MySQL
 * 1 GB disk space
 * 5 GB monthly bandwidth
-* Free subdomain
-* No forced ads
+* PHP
+* MySQL
 * CMS installer
+* Free website builder
+* No forced advertisements
 * Free forever
 
-AwardSpace currently describes its Free Hosting as suitable for small blogs, news sites and idea launches. ([AwardSpace Free Hosting](https://www.awardspace.com/free-hosting/))
+**💡 Why it stands out:**
+Simple traditional hosting without needing to learn a cloud platform.
 
 ---
 
 ## 14. [Freehostia](https://www.freehostia.com/) ⭐⭐⭐
 
 **Best for:**
-Very small websites, demonstrations, learning and testing.
+Very small websites, demonstrations, testing and learning.
 
 **✨ Brilliant features:**
 
 * PHP
 * MySQL
-* Control panel
-* One-click application installer
 * WordPress
 * Joomla
+* One-click installer
+* Email
 * No forced ads
 * Free forever
 
-**Important limitation:**
+**Current Free plan limits:**
 
-The current Free/Chocolate plan has only **250 MB storage, 6 GB monthly traffic and 10 MB MySQL storage**.
+```text
+250 MB disk
+6 GB monthly traffic
+1 MySQL database
+10 MB MySQL storage
+3 email accounts
+```
 
-**Think of it as:**
+**💡 Why it stands out:**
+Very easy to experiment with traditional hosting.
 
-`A tiny free practice server`
-
----
-
-## 15. [0hi.me](https://0hi.me/) ⭐⭐⭐
-
-**Best for:**
-Small experimental PHP/MySQL websites.
-
-**✨ Brilliant features:**
-
-* Free for lifetime
-* 5 GB disk space
-* 100 GB bandwidth
-* 9 domains
-* 9 MySQL databases
-* No advertising banners
-
-A surprisingly generous free PHP/MySQL option for experimentation.
+**⚠️ Major limitation:** Too small for serious WordPress or WooCommerce projects.
 
 ---
 
 # 🥈 Tier A — Static Website Hosting
 
-Perfect when you only need:
+Perfect when your website is:
 
-`HTML + CSS + JavaScript`
+```text
+HTML + CSS + JavaScript
+```
 
-No PHP server is required.
+and does not require PHP.
 
 ---
 
-## 16. [GitHub Pages](https://pages.github.com/) ⭐⭐⭐⭐⭐
+## 15. [GitHub Pages](https://pages.github.com/) ⭐⭐⭐⭐⭐
 
 **Best for:**
-Developer portfolios, documentation, project websites, blogs and resumes.
+Developer portfolios, documentation, project pages, resumes and blogs.
 
 **✨ Brilliant feature:**
 
-Your website lives directly inside your GitHub repository.
+```text
+Git repository
+      ↓
+GitHub Pages
+      ↓
+Website
+```
 
-**Think of it as:**
+Your website can live directly inside your GitHub repository.
 
-`Git repository → website`
-
----
-
-## 17. [GitLab Pages](https://about.gitlab.com/product/pages/) ⭐⭐⭐⭐⭐
-
-**Best for:**
-Documentation, portfolios, static websites and CI/CD projects.
-
-**✨ Brilliant feature:**
-
-GitLab CI/CD can automatically build and publish your website.
+**Best use:**
+Open-source projects and developer portfolios.
 
 ---
 
-## 18. [Surge](https://surge.sh/) ⭐⭐⭐⭐⭐
+## 16. [GitLab Pages](https://about.gitlab.com/product/pages/) ⭐⭐⭐⭐⭐
 
 **Best for:**
-Developers who want to publish a static site from the command line immediately.
+Documentation, static websites, CI/CD projects and developer portfolios.
 
 **✨ Brilliant features:**
+
+* Git-based deployment
+* CI/CD integration
+* Static-site generators
+* Plain HTML/CSS/JS
+* Custom domains
+* SSL/TLS
+
+**Important:** GitLab Pages does not provide server-side PHP processing.
+
+---
+
+## 17. [Surge](https://surge.sh/) ⭐⭐⭐⭐⭐
+
+**Best for:**
+Developers who want to publish a static website extremely quickly.
+
+**✨ Brilliant feature:**
 
 ```bash
 npm install --global surge
 surge
 ```
 
-* Extremely simple deployment
 * Free publishing
 * Custom domains
 * HTTPS
-* CDN
-* Clean URLs
+* Very simple CLI
+* Fast deployment
 
-Custom domains are available for free. ([Surge Tour](https://surge.sh/tour))
+**💡 Why it stands out:**
 
-**Think of it as:**
-
-`One command → website online`
+```text
+One command → website online
+```
 
 ---
 
-## 19. [Neocities](https://neocities.org/) ⭐⭐⭐⭐½
+## 18. [Neocities](https://neocities.org/) ⭐⭐⭐⭐½
 
 **Best for:**
-Personal, artistic, experimental and retro-style websites.
+Personal, artistic, experimental and retro-web websites.
 
 **✨ Brilliant features:**
 
 * 1 GB free storage
 * 200 GB bandwidth
-* No advertising
-* Community platform
-* Simple static hosting
-* Excellent creative-web ecosystem
+* No advertising on member sites
+* Free subdomain
+* SSL
+* Independent-web community
+* Creative website ecosystem
 
-Neocities' current Free plan includes 1 GB storage and 200 GB bandwidth. ([Neocities](https://neocities.org/supporter))
-
-**Think of it as:**
-
-`Free hosting + a community for independent websites`
+**💡 Why it stands out:**
+It is more than hosting — it is a community for the independent web.
 
 ---
 
-## 20. [Commons Host](https://commons.host/) ⭐⭐⭐⭐
-
-**Best for:**
-Open-source, community and static websites.
-
-**✨ Brilliant feature:**
-
-Strong Free/Open Source philosophy combined with static hosting and CDN infrastructure.
-
----
-
-## 21. [Harvis](https://github.com/harvis-io/cli) ⭐⭐⭐⭐
+## 19. [Harvis](https://github.com/harvis-io/cli) ⭐⭐⭐⭐
 
 **Best for:**
 Beginners who already have a folder containing HTML/CSS/JavaScript and simply want it online.
 
 **✨ Brilliant feature:**
 
-Minimal deployment complexity.
-
 ```text
 Your folder
-     ↓
-   Harvis
-     ↓
+    ↓
+  Harvis
+    ↓
 Public URL
 ```
 
-**Important:** Harvis is static hosting/deployment.
+No traditional server administration is required.
 
-It does **not** provide:
+**Not supported:**
 
-* PHP
-* MySQL
-* WordPress
-* WooCommerce
-* Traditional server-side applications
+```text
+PHP
+MySQL
+WordPress
+WooCommerce
+Traditional server-side applications
+```
 
----
-
-## 22. [Hostman](https://hostman.com/) ⭐⭐⭐½
-
-**Best for:**
-Small static websites deployed from GitHub.
-
-**✨ Brilliant feature:**
-
-Simple Git-based static deployment without managing a traditional server.
+**💡 Why it stands out:**
+One of the simplest possible ways to publish a static site.
 
 ---
 
 # 🎨 Tier B — No-Code Website & App Builders
 
-These platforms are different from ordinary hosting.
+These platforms are fundamentally different from normal hosting.
 
-You don't simply upload files.
-
-You **build the application inside the platform**.
+You **build the website or application inside the platform**.
 
 ---
 
-## 23. [Bubble](https://bubble.io/) ⭐⭐⭐⭐⭐
+## 20. [Bubble](https://bubble.io/) ⭐⭐⭐⭐⭐
 
 **Best for:**
 SaaS prototypes, dashboards, marketplaces, internal tools and web applications.
 
 **✨ Brilliant feature:**
+Build an actual application visually, including workflows, database logic and API integrations.
 
-You can build a real application — including workflows and API integrations — without traditional programming.
+**Best use:**
 
-The current Free plan is designed for projects that are still under construction; launching a production site requires a paid plan. ([Bubble Pricing](https://bubble.io/pricing/compare))
+```text
+Idea
+ ↓
+Visual development
+ ↓
+Prototype
+ ↓
+Application
+```
 
-**Think of it as:**
-
-`Build the application visually`
+**Important:** The Free plan is primarily for development and experimentation; production deployment requires a paid plan.
 
 ---
 
-# 🎯 Tier B — Website Builders
-
-## 24. [Tilda](https://tilda.cc/) ⭐⭐⭐⭐
+## 21. [Tilda](https://tilda.cc/) ⭐⭐⭐⭐
 
 **Best for:**
 Landing pages, portfolios, promotional websites and small business websites.
 
-**✨ Brilliant feature:**
+**✨ Brilliant features:**
 
-A visual block-based design system that makes professional-looking websites possible without coding.
+* Visual block editor
+* Large collection of design blocks
+* Responsive layouts
+* No-code workflow
+* Excellent for marketing pages
 
----
-
-# 🧰 Tier B — Developer Utilities
-
-## 25. [Fenix Web Server](https://preview.fenixwebserver.com/) ⭐⭐⭐⭐
-
-**Best for:**
-Local development, testing and temporarily sharing a website from your own computer.
-
-**✨ Brilliant feature:**
-
-Your own PC becomes the web server.
-
-**Think of it as:**
-
-`Your computer → Internet`
-
-It is a development/sharing tool rather than conventional cloud hosting.
+**💡 Why it stands out:**
+Very fast path from idea → polished landing page.
 
 ---
 
 # 📚 Tier A — Specialized Platforms
 
-## 26. [Read the Docs](https://readthedocs.org/) ⭐⭐⭐⭐⭐
+These aren't general-purpose website hosts, but they are excellent at what they do.
+
+---
+
+## 22. [Read the Docs](https://readthedocs.org/) ⭐⭐⭐⭐⭐
 
 **Best for:**
 Software documentation.
 
 **✨ Brilliant features:**
 
-* Documentation hosting
-* Versioning
+* Versioned documentation
 * Automatic builds
+* Git integration
 * PDF generation
-* Integration with Git repositories
+* Multiple documentation versions
 
 **Perfect for:**
 
@@ -602,25 +617,64 @@ Read the Docs
 
 ---
 
-## 27. [SourceForge](https://sourceforge.net/) ⭐⭐⭐⭐
+## 23. [SourceForge](https://sourceforge.net/) ⭐⭐⭐⭐
 
 **Best for:**
-Open-source software projects, downloadable files and software releases.
+Open-source software projects, downloads, releases and project distribution.
 
 **✨ Brilliant feature:**
-
-Designed around **software distribution**, not merely displaying web pages.
+Built around distributing software rather than simply displaying a website.
 
 ---
 
-## 28. [txti](https://txti.es/) ⭐⭐⭐
+# 🖥️ Tier B — Local Website Sharing
+
+## 24. [Fenix Web Server](https://preview.fenixwebserver.com/) ⭐⭐⭐⭐
 
 **Best for:**
-Extremely simple text-based pages.
+Local development, testing and temporarily sharing a website from your own computer.
 
 **✨ Brilliant feature:**
 
-Minimal setup for publishing lightweight Markdown-style content.
+```text
+Your PC
+  ↓
+Fenix Web Server
+  ↓
+Public Internet
+```
+
+It is primarily a **local hosting/development tool**, not conventional cloud hosting.
+
+---
+
+# 📊 Platform Comparison
+
+| Platform           | PHP |   MySQL  | Server-side code | Static | WordPress | Best for                 |
+| ------------------ | :-: | :------: | :--------------: | :----: | :-------: | ------------------------ |
+| Cloudflare Workers |  ❌  |     ❌    |         ✅        |    ✅   |     ❌     | APIs / Serverless        |
+| Cloudflare Pages   |  ❌  |     ❌    |        ✅*        |    ✅   |     ❌     | Modern frontend          |
+| Vercel             |  ❌  |     ❌    |         ✅        |    ✅   |     ❌     | Next.js                  |
+| Render             |  ✅* |    ✅*    |         ✅        |    ✅   |     ⚠️    | Full-stack               |
+| Netlify            |  ❌  |     ❌    |         ✅        |    ✅   |     ❌     | Frontend / Jamstack      |
+| Deno Deploy        |  ❌  |     ❌    |         ✅        |    ✅   |     ❌     | TypeScript / Edge        |
+| Firebase           |  ❌  |     ❌    |        ✅*        |    ✅   |     ❌     | Google/Firebase apps     |
+| Koyeb              |  ✅* |     ❌    |         ✅        |    ✅   |     ❌     | Containers / APIs        |
+| InfinityFree       |  ✅  |     ✅    |         ✅        |    ✅   |     ✅     | WordPress / PHP          |
+| Byet.host          |  ✅  |     ✅    |         ✅        |    ✅   |     ✅     | WordPress / PHP          |
+| HelioHost          |  ✅  |     ✅    |         ✅        |    ✅   |     ✅     | Multi-language hosting   |
+| AlwaysData         |  ✅  |     ✅    |         ✅        |    ✅   |     ⚠️    | Personal dev projects    |
+| AwardSpace         |  ✅  |     ✅    |         ✅        |    ✅   |     ✅     | Small PHP sites          |
+| Freehostia         |  ✅  |     ✅    |         ✅        |    ✅   |     ✅     | Tiny projects            |
+| GitHub Pages       |  ❌  |     ❌    |         ❌        |    ✅   |     ❌     | Projects / Docs          |
+| GitLab Pages       |  ❌  |     ❌    |         ❌        |    ✅   |     ❌     | CI/CD / Docs             |
+| Surge              |  ❌  |     ❌    |         ❌        |    ✅   |     ❌     | Fast static publishing   |
+| Neocities          |  ❌  |     ❌    |         ❌        |    ✅   |     ❌     | Creative websites        |
+| Harvis             |  ❌  |     ❌    |         ❌        |    ✅   |     ❌     | Simple static deployment |
+| Bubble             |  ❌  | Built-in |         ✅        |    ✅   |     ❌     | No-code applications     |
+| Tilda              |  ❌  | Built-in |      Limited     |    ✅   |     ❌     | Landing pages            |
+
+`*` Depends on the runtime/service architecture rather than traditional PHP/MySQL hosting.
 
 ---
 
@@ -633,7 +687,6 @@ What are you building?
 │   ├── InfinityFree
 │   ├── Byet.host
 │   ├── HelioHost
-│   ├── AlwaysData
 │   └── AwardSpace
 │
 ├── Static HTML/CSS/JS
@@ -648,32 +701,30 @@ What are you building?
 ├── Next.js
 │   └── Vercel
 │
-├── API / Serverless Backend
+├── API / Serverless
 │   ├── Cloudflare Workers
-│   ├── Deno Deploy
-│   ├── Render
-│   └── Koyeb
+│   └── Deno Deploy
 │
 ├── Full-Stack Application
 │   └── Render
 │
-├── Firebase Application
+├── Docker Web Service
+│   └── Koyeb
+│
+├── Firebase-based Application
 │   └── Firebase Hosting
 │
 ├── No-Code Application
 │   └── Bubble
 │
 ├── Landing Page
-│   ├── Tilda
-│   ├── Netlify
-│   └── Cloudflare Pages
+│   └── Tilda
 │
-├── Personal / Artistic Site
+├── Personal / Artistic Website
 │   └── Neocities
 │
 ├── Documentation
-│   ├── Read the Docs
-│   └── GitHub Pages
+│   └── Read the Docs
 │
 └── Open-Source Software
     └── SourceForge
@@ -681,102 +732,127 @@ What are you building?
 
 ---
 
-# 🏆 Overall Winners
+# 🏆 Best of the Best
 
-| Category                       | Winner               | Why?                                            |
-| ------------------------------ | -------------------- | ----------------------------------------------- |
-| 🏆 Modern Web Platform         | **Cloudflare**       | Static + serverless + CDN + developer ecosystem |
-| 🏆 WordPress / PHP             | **InfinityFree**     | Strong traditional free hosting                 |
-| 🏆 Traditional Hosting         | **Byet.host**        | Very feature-rich free PHP/MySQL hosting        |
-| 🏆 Multi-language Free Hosting | **HelioHost**        | Broad technology support                        |
-| 🏆 Full-Stack Playground       | **Render**           | Frontend + backend + database                   |
-| 🏆 Next.js                     | **Vercel**           | Best Next.js experience                         |
-| 🏆 Static Hosting              | **Cloudflare Pages** | Global CDN + modern workflow                    |
-| 🏆 Git-based Website           | **GitHub Pages**     | Repository → website                            |
-| 🏆 Simplest CLI Hosting        | **Surge**            | One-command publishing                          |
-| 🏆 Creative Websites           | **Neocities**        | Hosting + independent-web community             |
-| 🏆 No-Code Apps                | **Bubble**           | Build applications visually                     |
-| 🏆 Documentation               | **Read the Docs**    | Built specifically for documentation            |
-
----
-
-# ⭐ The Most Important Distinction
-
-Don't ask:
-
-> **"Which free hosting is the best?"**
-
-Ask:
-
-> **"What technology does my website need?"**
-
-### Need PHP + MySQL?
-
-➡️ **InfinityFree / Byet.host / HelioHost**
-
-### Need Next.js?
-
-➡️ **Vercel**
-
-### Need React / Vue / Astro?
-
-➡️ **Cloudflare Pages / Netlify**
-
-### Need an API?
-
-➡️ **Cloudflare Workers / Deno Deploy**
-
-### Need a full-stack application?
-
-➡️ **Render**
-
-### Need only HTML/CSS/JavaScript?
-
-➡️ **GitHub Pages / GitLab Pages / Cloudflare Pages / Surge / Harvis**
-
-### Need WordPress?
-
-➡️ **InfinityFree / Byet.host**
-
-### Need no-code?
-
-➡️ **Bubble / Tilda**
-
-### Need documentation?
-
-➡️ **Read the Docs**
-
-### Need to distribute open-source software?
-
-➡️ **SourceForge**
+| Category                            | Winner                 |
+| ----------------------------------- | ---------------------- |
+| 🏆 Best modern platform             | **Cloudflare**         |
+| ⚡ Best serverless platform          | **Cloudflare Workers** |
+| 🌐 Best static + serverless         | **Cloudflare Pages**   |
+| ⚛️ Best Next.js platform            | **Vercel**             |
+| 🧩 Best full-stack playground       | **Render**             |
+| 🐘 Best free PHP hosting            | **InfinityFree**       |
+| 🥈 Best traditional free host       | **Byet.host**          |
+| 🧰 Best multi-language free host    | **HelioHost**          |
+| 📄 Best Git-based static hosting    | **GitHub Pages**       |
+| 🪶 Simplest CLI static hosting      | **Surge**              |
+| 🎭 Best creative web community      | **Neocities**          |
+| 🧩 Best no-code application builder | **Bubble**             |
+| 📚 Best documentation hosting       | **Read the Docs**      |
 
 ---
 
-## ⚠️ Before Using a Free Host for Production
+# ⚠️ What "Free" Actually Means
 
-A free service can be excellent for:
+A free tier can have restrictions such as:
 
-* Learning
-* Testing
-* Prototypes
-* Personal websites
-* Small projects
-* Open-source projects
+* CPU and RAM limits
+* Bandwidth quotas
+* Request limits
+* Sleeping/scale-to-zero
+* Database expiration
+* Storage limits
+* Non-commercial-use restrictions
+* No backups
+* Limited support
+* No persistent filesystem
+* Production restrictions
 
-But for a serious production website, always check:
-
-**CPU limits · RAM · bandwidth · database limits · backups · email · cron jobs · SSL · custom domains · uptime · abuse policies · support · data persistence**
-
-A service being **free** does not automatically make it suitable for a production business.
-
----
-
-## 📌 License
-
-This list is intended as a community-maintained reference.
-
-Feel free to contribute corrections, new services and updated limits through a pull request.
+So before using a free platform for an important website, check the provider's current terms and limits.
 
 ---
 
-**Last verified: October 2026**
+# 🚨 Don't Compare These Platforms as if They Were the Same
+
+```text
+Traditional Hosting
+        │
+        ├── InfinityFree
+        ├── Byet.host
+        ├── HelioHost
+        └── AwardSpace
+
+Modern Cloud
+        │
+        ├── Cloudflare
+        ├── Vercel
+        ├── Render
+        ├── Netlify
+        ├── Deno Deploy
+        └── Koyeb
+
+Static Hosting
+        │
+        ├── GitHub Pages
+        ├── GitLab Pages
+        ├── Surge
+        ├── Neocities
+        └── Harvis
+
+No-Code
+        │
+        ├── Bubble
+        └── Tilda
+
+Specialized
+        │
+        ├── Read the Docs
+        └── SourceForge
+```
+
+The **best platform depends on the architecture of your website**, not simply on which provider advertises the largest "free" number.
+
+---
+
+# 🔄 Keeping This List Accurate
+
+Free hosting plans change frequently.
+
+When contributing an update, please verify:
+
+1. The service is currently operational.
+2. A genuine free plan is available.
+3. The listed limits are still accurate.
+4. The link points to the official provider.
+5. Important commercial or technical restrictions are mentioned.
+
+Please prefer **official provider documentation** over old blog posts and outdated hosting lists.
+
+---
+
+# 🤝 Contributing
+
+Pull requests are welcome.
+
+You can contribute:
+
+* New free hosting services
+* Updated limits
+* Removed/discontinued services
+* Corrections
+* Better categorization
+* New use cases
+
+Please verify information against the provider's current official website before submitting a change.
+
+---
+
+# 📜 License
+
+This project is intended as a community-maintained reference.
+
+The documentation is released under the **MIT License** unless otherwise stated.
+
+---
+
+**Last checked: October 2026**
