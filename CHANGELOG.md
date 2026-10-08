@@ -1,3 +1,15 @@
+## [2.3.0] - 2026-10-08
+
+### Expanded
+- Restored 14 current services from the earlier catalogue after fresh official-source verification: Deno Deploy, Firebase Hosting, Cloudflare D1, Google Compute Engine e2-micro, GitLab Pages, Byet.host, HelioHost, AlwaysData, Surge, Neocities, Appwrite Cloud, Kaggle Notebooks, Bubble, and Read the Docs.
+- Expanded the canonical taxonomy with No-Code App Builders and Documentation Hosting.
+- Regenerated README, JSON, category pages, sitemap, and robots.txt from `services.yml`.
+
+### Guardrails
+- Preserved the v2 schema and commercial/card enums.
+- Kept self-hosted PaaS tools separate from hosting-provider records.
+- Added cross-field assertions for the newly restored providers.
+
 # Changelog
 
 ## 2.2.0 — 2026-10-08

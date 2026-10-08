@@ -23,6 +23,8 @@ CATEGORIES = {
     "free-vps": "Free VPS & Compute",
     "ai-gpu-apps": "AI, GPU & Data Apps",
     "php-traditional": "PHP & Traditional Hosting",
+    "no-code": "No-Code App Builders",
+    "documentation": "Documentation Hosting",
 }
 
 FREE_CLASSES = {
@@ -43,6 +45,9 @@ START_ROWS = [
     ("Object storage", "Cloudflare R2 or Backblaze B2", "Finite free storage allowances; R2 requires billing setup."),
     ("Free VPS", "Oracle Cloud Always Free", "Billing verification and an idle-resource policy apply."),
     ("AI/data demo", "Hugging Face Spaces or Streamlit Community Cloud", "Free compute and commercial/data-use rules are more restrictive than ordinary hosting."),
+    ("GPU notebook", "Kaggle Notebooks or Google Colab", "Free accelerator availability is temporary and quota-limited."),
+    ("No-code app", "Bubble", "Free is a development environment; production requires payment."),
+    ("Open-source documentation", "Read the Docs Community or GitLab Pages", "Read the Docs Community is for open-source docs; GitLab CI minutes are limited on Free."),
 ]
 
 STYLE = r""":root{--bg:#0b1020;--panel:#11182b;--panel2:#0e1526;--text:#e8eefc;--muted:#aebbd4;--border:#24304a;--accent:#7aa2ff;--good:#55d187;--warn:#f3c969;--bad:#ff7b7b}
@@ -293,12 +298,14 @@ def write_index() -> None:
 <section class="card"><h2>Start Here</h2>
 <p>Choose the architecture first, then check the commercial policy, card requirement, sleep/reclaim behavior, production suitability and hard limit.</p>
 <div class="facts">
-<div class="fact"><strong>Static</strong><br>Cloudflare Pages / GitHub Pages</div>
+<div class="fact"><strong>Coverage</strong><br>36 current services</div>
+<div class="fact"><strong>Static</strong><br>Cloudflare Pages / GitHub Pages / Firebase</div>
 <div class="fact"><strong>Frontend</strong><br>Netlify / Vercel Hobby</div>
 <div class="fact"><strong>Containers</strong><br>Cloud Run / Koyeb / Render</div>
 <div class="fact"><strong>Databases</strong><br>Neon / Supabase / Turso / Atlas</div>
 <div class="fact"><strong>Storage</strong><br>R2 / B2</div>
-<div class="fact"><strong>VPS</strong><br>Oracle Cloud Always Free</div>
+<div class="fact"><strong>VPS</strong><br>Oracle / Google Cloud</div>
+<div class="fact"><strong>Docs / No-code</strong><br>Read the Docs / Bubble</div>
 </div></section>
 <section>
 <h2>Verified Service Matrix</h2>

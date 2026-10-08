@@ -19,6 +19,7 @@ CLASSES = {"Always Free", "Free Plan", "Free Development", "Free Credits", "Tria
 CATEGORIES = (
     "static-hosting", "frontend-platforms", "serverless-edge", "containers-cloud",
     "databases-baas", "object-storage", "free-vps", "ai-gpu-apps", "php-traditional",
+    "no-code", "documentation",
 )
 REQUIRED_FIELDS = [
     "id", "name", "category", "free_class", "card_requirement", "commercial_policy",
@@ -209,6 +210,12 @@ def validate_cross_fields(data: dict) -> None:
         "github-pages": "Restricted",
         "vercel": "No",
         "netlify": "Allowed",
+        "neocities": "Allowed",
+        "appwrite": "Allowed",
+        "alwaysdata": "No",
+        "bubble": "No",
+        "read-the-docs": "No",
+        "surge": "No",
     }
     expected_free_classes = {"mongodb-atlas": "Free Plan"}
     expected_fragments = {
@@ -219,6 +226,20 @@ def validate_cross_fields(data: dict) -> None:
         "github-pages": "Published site <= 1 GB",
         "vercel": "200 projects",
         "netlify": "300 credits/month",
+        "deno-deploy": "1M requests/month",
+        "firebase-hosting": "10 GB/month CDN data transfer",
+        "cloudflare-d1": "5M rows read/day",
+        "google-compute-engine": "1 non-preemptible e2-micro VM/month",
+        "gitlab-pages": "400 compute minutes/month",
+        "byet-host": "5 GB NVMe storage",
+        "heliohost": "5 domains",
+        "alwaysdata": "256 MB RAM",
+        "surge": "Free publishing",
+        "neocities": "1 GB storage",
+        "appwrite": "750K function executions/month",
+        "kaggle-notebooks": "free GPU access",
+        "bubble": "50K workload units/month",
+        "read-the-docs": "Community tier is for open-source documentation",
     }
     for sid, policy in expected_policies.items():
         if sid not in by_id:
