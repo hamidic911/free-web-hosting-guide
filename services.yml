@@ -1,0 +1,358 @@
+metadata:
+  title: Awesome Free Web Hosting & Cloud 2026
+  last_updated: '2026-10-08'
+  version: 2.2.1
+  schema_version: 2
+services:
+- id: cloudflare-pages
+  name: Cloudflare Pages
+  category: static-hosting
+  free_class: Always Free
+  card_requirement: Not required
+  commercial_policy: Allowed
+  commercial_note: Commercial use is subject to Cloudflare terms and plan-specific limits.
+  sleeps: false
+  reclaim_policy: None stated for the free Pages allowance.
+  custom_domain: true
+  production_ready: true
+  best_for: Static sites, documentation, portfolios, and Jamstack frontends.
+  hard_limit: 500 builds/month; 20,000 files/site; 25 MiB maximum single asset; Pages Functions use Workers quotas.
+  brilliant_feature: Static asset requests are free and unlimited; Functions can extend the site with edge logic.
+  official_source: https://developers.cloudflare.com/pages/platform/limits/
+  last_verified: '2026-10-08'
+- id: github-pages
+  name: GitHub Pages
+  category: static-hosting
+  free_class: Always Free
+  card_requirement: Not required
+  commercial_policy: Restricted
+  commercial_note: Not intended or allowed as free web hosting for online business, e-commerce, or commercial SaaS.
+  sleeps: false
+  reclaim_policy: None stated.
+  custom_domain: true
+  production_ready: true
+  best_for: Open-source project documentation, portfolios, blogs, and static informational sites.
+  hard_limit: Published site <= 1 GB; 100 GB/month soft bandwidth limit; 10 builds/hour soft limit for built-in Pages publishing; custom GitHub Actions deployments use Actions limits instead.
+  brilliant_feature: Versioned static publishing directly from Git repositories.
+  official_source: https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
+  last_verified: '2026-10-08'
+- id: vercel
+  name: Vercel (Hobby Plan)
+  category: frontend-platforms
+  free_class: Free Plan
+  card_requirement: Not required
+  commercial_policy: 'No'
+  commercial_note: Hobby is for personal, non-commercial use under the current Terms.
+  sleeps: false
+  reclaim_policy: Projects may be disabled or removed under current platform terms.
+  custom_domain: true
+  production_ready: false
+  best_for: Personal, non-commercial Next.js and frontend previews.
+  hard_limit: 200 projects; 100 deployments/day; 100 builds/hour; 45-minute build time/deployment; 100 MB static file upload; 1 concurrent deployment.
+  brilliant_feature: Deep integration with Next.js and Git-based preview deployments.
+  official_source: https://vercel.com/docs/limits/usage/plan-resource-limits
+  last_verified: '2026-10-08'
+- id: netlify
+  name: Netlify
+  category: frontend-platforms
+  free_class: Free Plan
+  card_requirement: Not required
+  commercial_policy: Allowed
+  commercial_note: Commercial use is subject to Netlify terms and the current credit-based Free plan.
+  sleeps: true
+  reclaim_policy: Sites pause when the monthly included credit allowance is exhausted.
+  custom_domain: true
+  production_ready: true
+  best_for: Frontend sites, Jamstack builds, forms, redirects, and lightweight serverless features.
+  hard_limit: 300 credits/month; production deploy 15 credits; bandwidth 20 credits/GB; web requests 2 credits/10K requests; compute 10 credits/GB-hour.
+  brilliant_feature: Credit-based platform with integrated deploy previews, forms, and frontend workflow.
+  official_source: https://www.netlify.com/pricing/
+  last_verified: '2026-10-08'
+- id: cloudflare-workers
+  name: Cloudflare Workers
+  category: serverless-edge
+  free_class: Always Free
+  card_requirement: Not required
+  commercial_policy: Allowed
+  commercial_note: Subject to Cloudflare terms and the free usage allowance.
+  sleeps: false
+  reclaim_policy: None stated.
+  custom_domain: true
+  production_ready: true
+  best_for: Edge APIs, request routing, webhooks, and lightweight backend logic.
+  hard_limit: 100,000 requests/day on the Workers Free plan; 10 ms CPU time/request.
+  brilliant_feature: Runs server-side logic close to users on Cloudflare’s global network.
+  official_source: https://developers.cloudflare.com/workers/platform/limits/
+  last_verified: '2026-10-08'
+- id: aws-lambda
+  name: AWS Lambda
+  category: serverless-edge
+  free_class: Always Free
+  card_requirement: Required
+  commercial_policy: Allowed
+  commercial_note: Commercial use is permitted subject to AWS terms and any applicable charges beyond the free allowance.
+  sleeps: false
+  reclaim_policy: None stated; event-driven execution is on demand.
+  custom_domain: true
+  production_ready: true
+  best_for: Event-driven APIs, jobs, automation, and AWS integrations.
+  hard_limit: 1 million requests/month and 400,000 GB-seconds/month free for Lambda functions.
+  brilliant_feature: Mature event-driven compute integrated across AWS services.
+  official_source: https://aws.amazon.com/lambda/pricing/
+  last_verified: '2026-10-08'
+- id: gcp-cloud-run
+  name: Google Cloud Run
+  category: containers-cloud
+  free_class: Always Free
+  card_requirement: Required
+  commercial_policy: Allowed
+  commercial_note: Commercial workloads are permitted under Google Cloud terms; a billing account is required.
+  sleeps: true
+  reclaim_policy: Scales instances to zero when idle.
+  custom_domain: true
+  production_ready: true
+  best_for: Stateless containerized APIs and web apps.
+  hard_limit: 2 million requests/month; 360,000 GiB-seconds memory; 180,000 vCPU-seconds; 1 GB North America outbound transfer/month under the listed free tier.
+  brilliant_feature: Runs arbitrary containers while handling deployment and autoscaling.
+  official_source: https://docs.cloud.google.com/free/docs/free-cloud-features
+  last_verified: '2026-10-08'
+- id: render
+  name: Render
+  category: containers-cloud
+  free_class: Free Plan
+  card_requirement: Not required
+  commercial_policy: Allowed
+  commercial_note: Commercial use is not prohibited by the free-instance documentation, but free instances are explicitly not for production applications.
+  sleeps: true
+  reclaim_policy: Free web services spin down after 15 minutes without inbound traffic; free Postgres expires after 30 days.
+  custom_domain: true
+  production_ready: false
+  best_for: Prototypes, hobby projects, and testing Node.js, Python, Docker, and other web services.
+  hard_limit: 750 free instance hours/workspace/month; web services sleep after 15m idle; free Postgres is 1 GB and expires after 30 days.
+  brilliant_feature: Simple Git-to-deploy workflow for apps and containers.
+  official_source: https://render.com/docs/free
+  last_verified: '2026-10-08'
+- id: koyeb
+  name: Koyeb
+  category: containers-cloud
+  free_class: Free Plan
+  card_requirement: Required
+  commercial_policy: Allowed
+  commercial_note: Free usage is available subject to Koyeb terms; a credit card is required for account validation.
+  sleeps: true
+  reclaim_policy: Scales the free service to zero after 1 hour without traffic.
+  custom_domain: true
+  production_ready: false
+  best_for: Hobby microservices and testing in Frankfurt or Washington, D.C.
+  hard_limit: 1 free Service/org in Frankfurt or Washington, D.C.; 512 MB RAM; 0.1 vCPU; 2 GB SSD; no volumes; scale-to-zero after 1 hour.
+  brilliant_feature: A real container service with Git-driven deployment and a persistent free allowance.
+  official_source: https://www.koyeb.com/docs/faqs/pricing
+  last_verified: '2026-10-08'
+- id: supabase
+  name: Supabase
+  category: databases-baas
+  free_class: Free Plan
+  card_requirement: Not required
+  commercial_policy: Allowed
+  commercial_note: Commercial use is subject to Supabase terms and free-plan limits.
+  sleeps: true
+  reclaim_policy: Free projects may be paused after low activity over a 7-day period.
+  custom_domain: false
+  production_ready: true
+  best_for: PostgreSQL, authentication, storage, realtime features, and APIs.
+  hard_limit: 500 MB database size; 1 GB file storage; 5 GB egress; 2 active projects; 50,000 MAU.
+  brilliant_feature: Managed Postgres with Auth, Storage, Realtime, and API layers in one platform.
+  official_source: https://supabase.com/pricing
+  last_verified: '2026-10-08'
+- id: neon
+  name: Neon
+  category: databases-baas
+  free_class: Free Plan
+  card_requirement: Not required
+  commercial_policy: Allowed
+  commercial_note: Commercial use is subject to Neon terms and plan limits.
+  sleeps: true
+  reclaim_policy: Compute scales to zero after inactivity; current free-plan compute allowance is usage based.
+  custom_domain: false
+  production_ready: true
+  best_for: Serverless PostgreSQL and branch-based development workflows.
+  hard_limit: 1 GB Postgres storage/project; 100 projects; 100 CU-hours/project/month; 10 branches/project; up to 2 CU autoscaling; 5 GB public network transfer/project/month.
+  brilliant_feature: Branchable Postgres infrastructure designed for isolated environments.
+  official_source: https://neon.com/blog/neon-free-plan-1-gb-per-project
+  last_verified: '2026-10-08'
+- id: turso
+  name: Turso
+  category: databases-baas
+  free_class: Free Plan
+  card_requirement: Not required
+  commercial_policy: Allowed
+  commercial_note: Commercial use is subject to Turso terms and free-plan limits.
+  sleeps: false
+  reclaim_policy: None stated.
+  custom_domain: false
+  production_ready: true
+  best_for: Edge-replicated SQLite/libSQL applications and lightweight SQL workloads.
+  hard_limit: 100 databases; 5 GB total storage; 500M rows read (scanned)/month; 10M rows written/month; 3 GB syncs/month; 1-day PITR.
+  brilliant_feature: SQLite-compatible database designed for globally distributed applications.
+  official_source: https://turso.tech/pricing
+  last_verified: '2026-10-08'
+- id: mongodb-atlas
+  name: MongoDB Atlas (M0)
+  category: databases-baas
+  free_class: Free Plan
+  card_requirement: Not required
+  commercial_policy: Allowed
+  commercial_note: Commercial use is subject to MongoDB terms.
+  sleeps: true
+  reclaim_policy: Free clusters are automatically paused after 30 days of inactivity and can be resumed; one Free cluster per project.
+  custom_domain: false
+  production_ready: false
+  best_for: Managed MongoDB document databases and flexible JSON-style schemas.
+  hard_limit: 0.5 GB storage including indexes; shared RAM/vCPU; one Free cluster per project; free clusters are for small-scale development and are automatically paused after 30 days inactivity.
+  brilliant_feature: Managed MongoDB without operating the database server yourself.
+  official_source: https://www.mongodb.com/pricing
+  last_verified: '2026-10-08'
+- id: upstash-redis
+  name: Upstash Redis
+  category: databases-baas
+  free_class: Free Plan
+  card_requirement: Not required
+  commercial_policy: Allowed
+  commercial_note: Commercial use is subject to Upstash terms and free-plan limits.
+  sleeps: false
+  reclaim_policy: None for claimed free databases.
+  custom_domain: false
+  production_ready: false
+  best_for: Serverless caching, rate limiting, sessions, and small key-value workloads.
+  hard_limit: 1 free database; 256 MB data; 10 GB monthly bandwidth; 500,000 commands/month.
+  brilliant_feature: REST-compatible Redis designed for serverless and edge applications.
+  official_source: https://upstash.com/pricing/redis
+  last_verified: '2026-10-08'
+- id: cloudflare-r2
+  name: Cloudflare R2
+  category: object-storage
+  free_class: Always Free
+  card_requirement: Required
+  commercial_policy: Allowed
+  commercial_note: Commercial use is subject to Cloudflare terms; R2 requires billing/payment setup.
+  sleeps: false
+  reclaim_policy: None stated.
+  custom_domain: true
+  production_ready: true
+  best_for: S3-compatible object storage where outbound Internet egress cost matters.
+  hard_limit: 10 GB-month storage/month; 1M Class A ops/month; 10M Class B ops/month; Internet egress is free.
+  brilliant_feature: No Internet egress bandwidth charge on stored objects.
+  official_source: https://developers.cloudflare.com/r2/pricing/
+  last_verified: '2026-10-08'
+- id: backblaze-b2
+  name: Backblaze B2
+  category: object-storage
+  free_class: Always Free
+  card_requirement: Not required
+  commercial_policy: Allowed
+  commercial_note: Commercial use is subject to Backblaze terms.
+  sleeps: false
+  reclaim_policy: None stated.
+  custom_domain: true
+  production_ready: true
+  best_for: Object storage, backups, media, and application assets.
+  hard_limit: First 10 GB storage is always free; free egress up to 3× average monthly stored data; egress above that may be free via supported CDN/compute partners.
+  brilliant_feature: Simple object storage with generous built-in free egress allowances.
+  official_source: https://www.backblaze.com/cloud-storage/pricing
+  last_verified: '2026-10-08'
+- id: oracle-cloud
+  name: Oracle Cloud Always Free
+  category: free-vps
+  free_class: Always Free
+  card_requirement: Required
+  commercial_policy: Allowed
+  commercial_note: Commercial use is subject to Oracle Cloud terms and tenancy policies.
+  sleeps: false
+  reclaim_policy: Oracle may reclaim idle Always Free compute instances under its current idle-resource policy.
+  custom_domain: true
+  production_ready: true
+  best_for: Self-hosted Linux servers, Docker, utilities, and persistent services.
+  hard_limit: Up to 2 OCPUs and 12 GB RAM on Ampere A1 Always Free allocation; 200 GB total Always Free block volume.
+  brilliant_feature: A relatively large persistent VM allocation for a permanently free tier.
+  official_source: https://www.oracle.com/cloud/free/
+  last_verified: '2026-10-08'
+- id: huggingface-spaces
+  name: Hugging Face Spaces
+  category: ai-gpu-apps
+  free_class: Free Plan
+  card_requirement: Not required
+  commercial_policy: Restricted
+  commercial_note: Static Spaces are free for everyone; new Gradio and Docker compute Spaces require a paid plan. Review the current service terms before commercial deployment.
+  sleeps: true
+  reclaim_policy: Free compute availability depends on hardware/plan; static Spaces remain free.
+  custom_domain: false
+  production_ready: false
+  best_for: AI demos and static model showcases hosted as Spaces.
+  hard_limit: Static Spaces are free; Gradio/Docker Spaces run on compute and require a paid plan for new deployments; free ZeroGPU access is limited and dynamic.
+  brilliant_feature: Tight integration with the open ML model ecosystem and Spaces UI.
+  official_source: https://huggingface.co/docs/hub/spaces-overview
+  last_verified: '2026-10-08'
+- id: streamlit-cloud
+  name: Streamlit Community Cloud
+  category: ai-gpu-apps
+  free_class: Free Plan
+  card_requirement: Not required
+  commercial_policy: 'No'
+  commercial_note: Community Cloud content that processes personal information is limited to personal and non-commercial use; the service is intended for evaluation, educational, and household use in those cases.
+  sleeps: true
+  reclaim_policy: Apps can sleep when inactive and can be restarted from their public URL.
+  custom_domain: false
+  production_ready: false
+  best_for: Public data apps and Python dashboards connected to GitHub.
+  hard_limit: Public apps plus 1 private app; 1 GB RAM/app; current Community Cloud terms restrict certain personal-information use to personal/non-commercial purposes.
+  brilliant_feature: Turns Python data applications into shareable web UIs with almost no infrastructure work.
+  official_source: https://docs.streamlit.io/deploy/streamlit-community-cloud
+  last_verified: '2026-10-08'
+- id: google-colab
+  name: Google Colab
+  category: ai-gpu-apps
+  free_class: Free Plan
+  card_requirement: Not required
+  commercial_policy: Restricted
+  commercial_note: Not a general web-hosting service; free compute is ephemeral and governed by Google Colab terms and availability.
+  sleeps: true
+  reclaim_policy: Sessions are ephemeral and may terminate because of idle/runtime limits or resource availability.
+  custom_domain: false
+  production_ready: false
+  best_for: Interactive Python notebooks, experiments, and ML research.
+  hard_limit: Ephemeral notebook sessions; GPU/TPU availability is dynamic and not guaranteed.
+  brilliant_feature: Browser-based Jupyter environment with optional accelerator access.
+  official_source: https://colab.research.google.com/
+  last_verified: '2026-10-08'
+- id: serv00
+  name: Serv00
+  category: php-traditional
+  free_class: Free Plan
+  card_requirement: Not required
+  commercial_policy: Allowed
+  commercial_note: Commercial websites are not generally prohibited; account resale/rental and prohibited resource-intensive or unlawful uses are disallowed.
+  sleeps: false
+  reclaim_policy: Free accounts require periodic control-panel login; inactivity can lead to account removal.
+  custom_domain: true
+  production_ready: false
+  best_for: PHP sites, FreeBSD/SSH learning, cron jobs, and small personal projects.
+  hard_limit: 3 GB disk; 512 MB RAM quota; shared CPU limits; periodic account activity required.
+  brilliant_feature: Traditional hosting with SSH access, cron, and developer-oriented tooling.
+  official_source: https://www.serv00.com/
+  last_verified: '2026-10-08'
+- id: infinityfree
+  name: InfinityFree
+  category: php-traditional
+  free_class: Free Plan
+  card_requirement: Not required
+  commercial_policy: Allowed
+  commercial_note: Commercial websites and payment processing are allowed; reselling InfinityFree hosting requires permission. WooCommerce is technically allowed but the free shared environment is not recommended for serious production stores.
+  sleeps: false
+  reclaim_policy: Accounts can be suspended for exceeding resource limits or violating terms.
+  custom_domain: true
+  production_ready: false
+  best_for: Learning PHP, WordPress testing, and non-critical websites.
+  hard_limit: 5 GB storage; 50,000 daily hits; 30,000 inodes; shared CPU/resource limits; no built-in free email service.
+  brilliant_feature: Free PHP hosting with control-panel tooling and one-click app installation.
+  official_source: https://www.infinityfree.com/terms/
+  last_verified: '2026-10-08'

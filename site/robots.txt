@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hamidic911.github.io/free-web-hosting-guide/sitemap.xml

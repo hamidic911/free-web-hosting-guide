@@ -1,0 +1,29 @@
+:root{--bg:#0b1020;--panel:#11182b;--panel2:#0e1526;--text:#e8eefc;--muted:#aebbd4;--border:#24304a;--accent:#7aa2ff;--good:#55d187;--warn:#f3c969;--bad:#ff7b7b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--accent)}
+.container{width:min(1240px,calc(100% - 32px));margin:auto}
+.hero{padding:52px 0 30px;border-bottom:1px solid var(--border)}
+h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.08;margin:.1em 0}
+h2{line-height:1.2}
+.lead{color:var(--muted);max-width:980px;font-size:1.08rem}
+.nav{display:flex;flex-wrap:wrap;gap:10px;padding:20px 0}
+.nav a{border:1px solid var(--border);background:var(--panel);border-radius:999px;padding:7px 13px;text-decoration:none;color:var(--text)}
+.nav a:hover{border-color:var(--accent)}
+main{padding:28px 0 64px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:20px;margin:16px 0}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:14px 0}
+.fact{background:var(--panel2);border:1px solid var(--border);padding:12px;border-radius:10px}
+.tools{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.tools input{flex:1;min-width:260px;background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:12px}
+.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:12px}
+.matrix{width:100%;border-collapse:collapse;min-width:1120px;background:var(--panel2)}
+th,td{border-bottom:1px solid var(--border);padding:12px;text-align:left;vertical-align:top}
+th{background:var(--panel);position:sticky;top:0;z-index:1}
+.badge{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:3px 9px;font-size:.86rem;background:var(--panel2)}
+.muted{color:var(--muted)}
+.small{font-size:.92rem}
+.notice{border-left:4px solid var(--warn)}
+footer{border-top:1px solid var(--border);padding:24px 0 50px;color:var(--muted)}
+code{background:#080d19;padding:2px 5px;border-radius:5px}
