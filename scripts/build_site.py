@@ -51,136 +51,281 @@ START_ROWS = [
 ]
 
 STYLE = r""":root{
-  --bg:#f4f7fb; --bg-soft:#eef3ff; --surface:#ffffff; --surface-2:#f8faff;
-  --text:#172033; --muted:#64748b; --border:#dce4f1;
-  --primary:#4f46e5; --primary-2:#6366f1; --cyan:#0ea5e9; --teal:#10b981;
-  --amber:#f59e0b; --red:#ef4444; --shadow:0 14px 40px rgba(42,58,100,.10);
-  --shadow-soft:0 6px 18px rgba(42,58,100,.07);
+  --paper:#EDEAE2;
+  --ink:#16181D;
+  --blue:#1F4FD8;
+  --trap:#E0541B;
+  --ok:#2F6F4F;
+  --line:#CDC8BB;
+  --surface:#F7F5EF;
+  --surface-strong:#FFFFFF;
+  --muted:#5E615F;
+  --soft-blue:#E9EFFC;
+  --soft-trap:#FBEDE7;
+  --soft-ok:#EAF3ED;
+  --focus:rgba(31,79,216,.22);
+  --shadow:0 14px 30px rgba(22,24,29,.07);
 }
 html[data-theme="dark"]{
-  --bg:#0b1220; --bg-soft:#101a2d; --surface:#111b30; --surface-2:#0e1729;
-  --text:#edf2ff; --muted:#aab8d1; --border:#24324d;
-  --primary:#818cf8; --primary-2:#6366f1; --cyan:#38bdf8; --teal:#34d399;
-  --amber:#fbbf24; --red:#fb7185; --shadow:0 18px 45px rgba(0,0,0,.28); --shadow-soft:0 8px 22px rgba(0,0,0,.20);
+  --paper:#14171B;
+  --ink:#F4F3EE;
+  --blue:#7EA2FF;
+  --trap:#FF8A55;
+  --ok:#73B18D;
+  --line:#32363D;
+  --surface:#1B1F24;
+  --surface-strong:#20252B;
+  --muted:#B5B7B4;
+  --soft-blue:#202A3D;
+  --soft-trap:#3A251D;
+  --soft-ok:#1C3025;
+  --focus:rgba(126,162,255,.25);
+  --shadow:0 16px 34px rgba(0,0,0,.24);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-soft) 44%,var(--bg) 100%);color:var(--text);font:16px/1.65 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;min-height:100vh}
-body::before{content:"";position:fixed;inset:-25vh -10vw auto auto;width:55vw;height:55vw;background:radial-gradient(circle,rgba(99,102,241,.13),transparent 62%);pointer-events:none;z-index:-1}
-body::after{content:"";position:fixed;inset:auto auto -25vh -15vw;width:55vw;height:55vw;background:radial-gradient(circle,rgba(14,165,233,.10),transparent 64%);pointer-events:none;z-index:-1}
-a{color:var(--primary);text-decoration:none} a:hover{text-decoration:underline}
-.container{width:min(1240px,calc(100% - 36px));margin:auto}
-.hero{position:relative;overflow:hidden;padding:72px 0 54px;background:linear-gradient(135deg,#312e81 0%,#4f46e5 38%,#0ea5e9 100%);color:#fff;box-shadow:0 18px 50px rgba(49,46,129,.22)}
-.hero::after{content:"";position:absolute;right:-8%;top:-55%;width:48vw;height:48vw;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 66%)}
-.hero-inner{position:relative;z-index:1}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border-radius:999px;font-size:.82rem;font-weight:700;letter-spacing:.02em}
-.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 5px rgba(52,211,153,.15)}
-h1{font-size:clamp(2.25rem,5vw,4.25rem);line-height:1.02;letter-spacing:-.04em;margin:.25em 0 .18em;max-width:920px}
-h2{line-height:1.18;letter-spacing:-.02em}
-.lead{color:rgba(255,255,255,.88);max-width:920px;font-size:1.12rem}
-.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:10px 15px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.12);color:#fff;backdrop-filter:blur(8px);cursor:pointer}
-.button:hover{background:rgba(255,255,255,.20);text-decoration:none}
-.button.primary{background:#fff;color:#3730a3;border-color:#fff}
-.theme-toggle{cursor:pointer}
-.nav-wrap{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
-.nav{display:flex;flex-wrap:wrap;gap:9px;padding:14px 0}
-.nav a{border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:7px 12px;text-decoration:none;color:var(--text);font-size:.9rem;font-weight:600;box-shadow:0 2px 8px rgba(31,41,55,.04)}
-.nav a:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-1px)}
-main{padding:34px 0 70px}
-.section-kicker{color:var(--primary);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:24px;margin:18px 0;box-shadow:var(--shadow-soft);transition:transform .18s ease,box-shadow .18s ease}
-.card:hover{box-shadow:var(--shadow);transform:translateY(-1px)}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:11px;margin:16px 0}
-.fact{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--border);padding:12px 14px;border-radius:14px}
-.fact strong{display:block;color:var(--text);font-size:.87rem}
-.tools{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
-.tools input{flex:1;min-width:260px;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow-soft);outline:none}
-.tools input:focus{border-color:var(--primary);box-shadow:0 0 0 4px color-mix(in srgb,var(--primary) 15%,transparent)}
-.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:18px;background:var(--surface);box-shadow:var(--shadow-soft)}
-.matrix{width:100%;border-collapse:separate;border-spacing:0;min-width:1120px;background:var(--surface)}
-th,td{border-bottom:1px solid var(--border);padding:13px 14px;text-align:left;vertical-align:top}
-th{background:linear-gradient(135deg,#eef2ff,#eff6ff);color:#27324b;position:sticky;top:0;z-index:1;font-size:.83rem;text-transform:uppercase;letter-spacing:.05em}
-html[data-theme="dark"] th{background:linear-gradient(135deg,#17213a,#10233a);color:#dbe6ff}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 ui-sans-serif,"Space Grotesk","Arial Narrow",Aptos,system-ui,sans-serif;min-height:100vh}
+body::before{content:"";display:block;height:4px;background:var(--blue)}
+a{color:var(--blue);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.container{width:min(1180px,calc(100% - 32px));margin-inline:auto}
+.hero{padding:58px 0 46px;border-bottom:1px solid var(--line);background:var(--paper)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(340px,.85fr);gap:40px;align-items:end}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.eyebrow::before{content:"";width:9px;height:9px;background:var(--trap);display:inline-block;border-radius:2px}
+h1{font-size:clamp(2.45rem,5vw,5.2rem);line-height:.98;letter-spacing:-.055em;margin:.22em 0 .22em;max-width:900px}
+h2{line-height:1.15;letter-spacing:-.025em}
+.lead{font-size:1.08rem;max-width:760px;color:var(--muted)}
+.hero-tool{border:1px solid var(--ink);background:var(--surface-strong);padding:22px;box-shadow:var(--shadow);align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+.hero-tool-label{font-weight:800;margin-bottom:10px}
+.architecture-picker{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.35}
+.architecture-picker select{font:inherit;font-weight:800;color:var(--blue);background:var(--surface);border:1px solid var(--line);padding:8px 34px 8px 10px;border-radius:8px}
+.hero-note{color:var(--muted);font-size:.9rem;margin:12px 0 0}
+.theme-toggle{margin-top:14px;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:8px 11px;border-radius:8px;font-weight:700;cursor:pointer}
+.icon{width:17px;height:17px;display:inline-block;flex:none}
+.nav-wrap{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 93%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;gap:18px;overflow:auto;padding:12px 0;scrollbar-width:thin}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:.88rem;font-weight:700;padding-block:3px;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--blue);border-color:var(--blue)}
+main{padding:42px 0 72px}
+.section-kicker{color:var(--blue);font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:14px}
+.section-head h2{margin:5px 0 0;font-size:clamp(1.7rem,3vw,2.35rem)}
+.meta-line{color:var(--muted);font-size:.9rem}
+.architecture-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0 44px}
+.condition-card{background:var(--surface-strong);border:1px solid var(--line);padding:18px;position:relative;min-height:190px}
+.condition-card::before{content:"";position:absolute;inset-block:0 auto 0;inset-inline-start:0;width:4px;background:var(--ok)}
+.condition-card.has-trap::before{background:var(--trap)}
+.condition-top{display:flex;justify-content:space-between;gap:10px;align-items:start;margin-bottom:10px}
+.condition-top h3{margin:0;font-size:1.08rem;line-height:1.2}
+.micro{font-size:.74rem;color:var(--muted);font-family:"JetBrains Mono","IBM Plex Mono","Cascadia Mono",monospace;white-space:nowrap}
+.limit{font:800 1.03rem/1.45 "JetBrains Mono","IBM Plex Mono","Cascadia Mono",monospace;letter-spacing:-.02em;margin:8px 0 12px}
+.conditions{display:grid;grid-template-columns:1fr 1fr;gap:7px 12px;margin-top:10px}
+.condition-line{font-size:.78rem;color:var(--muted);display:flex;gap:7px;align-items:center}
+.condition-dot{width:7px;height:7px;background:var(--ok);flex:none}
+.condition-line.alert .condition-dot{background:var(--trap)}
+.condition-line strong{color:var(--ink)}
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:16px 0 18px}
+.search-wrap{flex:1;min-width:260px;position:relative}
+.search-wrap input{width:100%;background:var(--surface-strong);border:1px solid var(--line);color:var(--ink);padding:13px 15px;border-radius:8px;font:inherit}
+.filter-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:10px 12px;border-radius:8px;font-weight:800;cursor:pointer}
+.filter-btn.active{border-color:var(--blue);background:var(--soft-blue);color:var(--blue)}
+.filter-btn:hover{border-color:var(--blue)}
+.table-wrap{overflow:auto;border:1px solid var(--line);background:var(--surface-strong)}
+.matrix{width:100%;border-collapse:separate;border-spacing:0;min-width:1080px}
+th,td{border-bottom:1px solid var(--line);padding:14px 14px;text-align:left;vertical-align:top}
+th{background:var(--ink);color:var(--paper);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;position:sticky;top:0;z-index:1}
 tr:last-child td{border-bottom:0}
-tbody tr:hover td{background:color-mix(in srgb,var(--primary) 4%,var(--surface))}
-.badge{display:inline-flex;align-items:center;border:1px solid var(--border);border-radius:999px;padding:4px 9px;font-size:.82rem;background:var(--surface-2);font-weight:700}
-.badge.success,.policy-allowed{color:#047857;background:#ecfdf5;border-color:#a7f3d0}.badge.warning,.policy-restricted{color:#a16207;background:#fffbeb;border-color:#fde68a}.badge.danger,.policy-no{color:#b91c1c;background:#fef2f2;border-color:#fecaca}
-html[data-theme="dark"] .badge.success,html[data-theme="dark"] .policy-allowed{color:#6ee7b7;background:#07362a;border-color:#0f6b54}html[data-theme="dark"] .badge.warning,html[data-theme="dark"] .policy-restricted{color:#fcd34d;background:#3b2b08;border-color:#70520a}html[data-theme="dark"] .badge.danger,html[data-theme="dark"] .policy-no{color:#fda4af;background:#43131b;border-color:#6f2432}
-.status-yes{color:#047857;font-weight:800}.status-no{color:#b91c1c;font-weight:800}
-.muted{color:var(--muted)}.small{font-size:.92rem}
-.notice{border-left:4px solid var(--amber)}
-footer{border-top:1px solid var(--border);padding:28px 0 55px;color:var(--muted)}
-code{background:color-mix(in srgb,var(--primary) 8%,var(--surface));padding:3px 6px;border-radius:7px}
-.category-header{margin-bottom:24px}.category-header h1{color:var(--text);margin-bottom:.15em}.category-header .lead{color:var(--muted)}
-.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-@media (max-width:800px){.container{width:min(100% - 22px,1240px)}.hero{padding:52px 0 42px}.nav{overflow-x:auto;flex-wrap:nowrap;padding-bottom:12px}.nav a{white-space:nowrap}.card{padding:18px;border-radius:16px}.matrix{min-width:980px}}
-@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.card,.nav a:hover{transform:none}}
+tbody tr:hover td{background:color-mix(in srgb,var(--blue) 3%,var(--surface-strong))}
+.service-name{font-weight:900}
+.service-name small{display:block;color:var(--muted);font-size:.75rem;font-weight:700;margin-top:3px}
+.badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);padding:4px 8px;border-radius:7px;font-size:.78rem;font-weight:800;white-space:nowrap}
+.badge.ok{color:var(--ok);background:var(--soft-ok);border-color:color-mix(in srgb,var(--ok) 30%,var(--line))}
+.badge.trap{color:var(--trap);background:var(--soft-trap);border-color:color-mix(in srgb,var(--trap) 30%,var(--line))}
+.badge.blue{color:var(--blue);background:var(--soft-blue);border-color:color-mix(in srgb,var(--blue) 28%,var(--line))}
+.source-link{font-weight:800;white-space:nowrap}
+.mono{font-family:"JetBrains Mono","IBM Plex Mono","Cascadia Mono",monospace}
+.mobile-results{display:none}
+.card{border:1px solid var(--line);background:var(--surface-strong);padding:22px;margin:18px 0;box-shadow:var(--shadow)}
+.card h2{margin-top:0}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:9px;margin:15px 0}
+.fact{border:1px solid var(--line);background:var(--surface);padding:10px 12px}
+.fact strong{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+footer{border-top:1px solid var(--line);padding:28px 0 55px;color:var(--muted);font-size:.9rem}
+code{font-family:"JetBrains Mono","IBM Plex Mono","Cascadia Mono",monospace;background:var(--soft-blue);padding:2px 5px}
+.category-header{padding-bottom:26px;border-bottom:1px solid var(--line)}
+.category-header h1{margin-bottom:.12em}
+.category-header .lead{max-width:800px}
+.trap-note{border-inline-start:4px solid var(--trap);padding:10px 13px;background:var(--soft-trap);margin:16px 0}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:22px}
+  .architecture-results{grid-template-columns:1fr}
+  .hero{padding:46px 0 34px}
+}
+@media (max-width:800px){
+  .container{width:min(100% - 22px,1180px)}
+  .hero h1{font-size:clamp(2.35rem,12vw,4rem)}
+  .section-head{display:block}
+  .table-wrap{display:none}
+  .mobile-results{display:grid;gap:12px}
+  .mobile-card{background:var(--surface-strong);border:1px solid var(--line);padding:17px;position:relative}
+  .mobile-card::before{content:"";position:absolute;inset-block:0;inset-inline-start:0;width:4px;background:var(--ok)}
+  .mobile-card.has-trap::before{background:var(--trap)}
+  .mobile-head{display:flex;justify-content:space-between;gap:12px;align-items:start}
+  .mobile-name{font-weight:900;line-height:1.25}
+  .mobile-category{font-size:.75rem;color:var(--muted);margin-top:3px}
+  .mobile-limit{font:800 .96rem/1.5 "JetBrains Mono","IBM Plex Mono","Cascadia Mono",monospace;margin:13px 0}
+  .mobile-conditions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:12px}
+  .mobile-condition{font-size:.78rem;border:1px solid var(--line);padding:7px 8px;background:var(--surface)}
+  .mobile-condition.alert{border-color:color-mix(in srgb,var(--trap) 35%,var(--line));background:var(--soft-trap)}
+  .mobile-source{font-size:.8rem;font-weight:800}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 """
 
 APP = r"""document.addEventListener('DOMContentLoaded', () => {
   const body = document.querySelector('#servicesBody');
+  const mobileBody = document.querySelector('#mobileServicesBody');
   const search = document.querySelector('#searchInput');
   const status = document.querySelector('#resultStatus');
   const themeToggle = document.querySelector('#themeToggle');
+  const architectureSelect = document.querySelector('#architectureSelect');
+  const recommendationArea = document.querySelector('#recommendationArea');
+  const filterButtons = [...document.querySelectorAll('[data-filter]')];
 
+  const iconMoon = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg>';
+  const iconSun = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg>';
   const setTheme = (theme) => {
     document.documentElement.dataset.theme = theme;
     try { localStorage.setItem('fwg-theme', theme); } catch (_) {}
-    if (themeToggle) themeToggle.textContent = theme === 'dark' ? '☀️ Light mode' : '🌙 Dark mode';
+    if (themeToggle) themeToggle.innerHTML = `${theme === 'dark' ? iconSun : iconMoon}<span>${theme === 'dark' ? 'Light mode' : 'Dark mode'}</span>`;
   };
   let savedTheme = null;
   try { savedTheme = localStorage.getItem('fwg-theme'); } catch (_) {}
-  const preferredTheme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  setTheme(preferredTheme);
+  setTheme(savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
   if (themeToggle) themeToggle.addEventListener('click', () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
 
-  const policyClass = (value) => value === 'Allowed' ? 'success' : value === 'Restricted' ? 'warning' : 'danger';
-  const cardLabel = (value) => value === 'Required' ? 'Card required' : value === 'Conditional' ? 'Card conditional' : 'No card';
+  const policyClass = (value) => value === 'Allowed' ? 'ok' : value === 'Restricted' ? 'trap' : 'trap';
+  const cardLabel = (value) => value === 'Required' ? 'Required' : value === 'Conditional' ? 'Conditional' : 'No';
+  const cardAlert = (value) => value === 'Required' || value === 'Conditional';
+  const sleepText = (service) => service.sleeps ? 'Yes' : 'No';
+  const productionText = (service) => service.production_ready ? 'Yes' : 'No';
+  const hasTrap = (service) => cardAlert(service.card_requirement) || service.commercial_policy !== 'Allowed' || service.sleeps || !service.production_ready || (service.reclaim_policy && service.reclaim_policy.toLowerCase() !== 'none' && service.reclaim_policy.toLowerCase() !== 'none stated.');
+
+  const conditionMarkup = (service) => {
+    const rows = [
+      ['Card', cardLabel(service.card_requirement), cardAlert(service.card_requirement)],
+      ['Commercial', service.commercial_policy, service.commercial_policy !== 'Allowed'],
+      ['Sleeps', sleepText(service), service.sleeps],
+      ['Production', productionText(service), !service.production_ready]
+    ];
+    return rows.map(([label, value, alert]) => `<div class="condition-line${alert ? ' alert' : ''}"><span class="condition-dot"></span><span>${label}: <strong>${value}</strong></span></div>`).join('');
+  };
+
+  const conditionBadges = (service) => {
+    const items = [
+      ['Card', cardLabel(service.card_requirement), cardAlert(service.card_requirement)],
+      ['Commercial', service.commercial_policy, service.commercial_policy !== 'Allowed'],
+      ['Sleeps', sleepText(service), service.sleeps],
+      ['Production', productionText(service), !service.production_ready]
+    ];
+    return items.map(([label, value, alert]) => `<div class="mobile-condition${alert ? ' alert' : ''}">${label}: <strong>${value}</strong></div>`).join('');
+  };
+
+  const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  const recommendationMap = {
+    wordpress: ['infinityfree','byet-host','heliohost'],
+    api: ['cloudflare-workers','gcp-cloud-run','deno-deploy'],
+    nextjs: ['vercel-hobby','netlify','cloudflare-pages'],
+    database: ['neon','supabase','turso'],
+    ai: ['hugging-face-spaces','streamlit-community-cloud','google-colab'],
+    docker: ['gcp-cloud-run','koyeb','render'],
+    static: ['cloudflare-pages','github-pages','firebase-hosting'],
+    storage: ['cloudflare-r2','backblaze-b2'],
+    vps: ['oracle-cloud','google-cloud'],
+    docs: ['github-pages','read-the-docs','gitlab-pages'],
+    nocode: ['bubble']
+  };
+
+  const renderRecommendations = (services) => {
+    if (!recommendationArea || !architectureSelect) return;
+    const ids = recommendationMap[architectureSelect.value] || [];
+    const selected = ids.map(id => services.find(s => s.id === id)).filter(Boolean);
+    recommendationArea.replaceChildren();
+    for (const service of selected.slice(0, 3)) {
+      const card = document.createElement('article');
+      card.className = `condition-card${hasTrap(service) ? ' has-trap' : ''}`;
+      card.innerHTML = `
+        <div class="condition-top"><h3>${esc(service.name)}</h3><span class="micro">${esc(service.last_verified)}</span></div>
+        <div class="limit">${esc(service.hard_limit)}</div>
+        <div class="conditions">${conditionMarkup(service)}</div>
+        <a class="source-link" href="${esc(service.official_source)}" target="_blank" rel="noopener">Official source ↗</a>`;
+      recommendationArea.appendChild(card);
+    }
+  };
 
   const load = async () => {
     try {
-      const response = await fetch('services.json', {cache: 'no-store'});
+      const response = await fetch('services.json', {cache:'no-store'});
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       const services = Array.isArray(data.services) ? data.services : [];
+      if (architectureSelect) architectureSelect.addEventListener('change', () => renderRecommendations(services));
+      renderRecommendations(services);
+
       const render = () => {
-        const q = (search.value || '').trim().toLowerCase();
-        body.replaceChildren();
-        let count = 0;
-        for (const service of services) {
-          const haystack = [service.name, service.category, service.free_class, service.card_requirement, service.commercial_policy, service.commercial_note, service.hard_limit, service.best_for, service.brilliant_feature].join(' ').toLowerCase();
-          if (q && !haystack.includes(q)) continue;
-          const row = document.createElement('tr');
-          const cells = [
-            {value: service.name, type: 'name'},
-            {value: service.category},
-            {value: service.free_class, type: 'badge'},
-            {value: cardLabel(service.card_requirement), type: 'card'},
-            {value: service.commercial_policy, type: 'policy'},
-            {value: service.sleeps ? 'Yes' : 'No', type: 'bool'},
-            {value: service.production_ready ? 'Yes' : 'No', type: 'bool'},
-            {value: service.hard_limit}
-          ];
-          cells.forEach(({value, type}) => {
-            const cell = document.createElement('td');
-            if (type === 'name') { const strong = document.createElement('strong'); strong.textContent = value; cell.appendChild(strong); }
-            else if (type === 'badge' || type === 'card') { const badge = document.createElement('span'); badge.className = 'badge'; badge.textContent = value; cell.appendChild(badge); }
-            else if (type === 'policy') { const badge = document.createElement('span'); badge.className = `badge policy-${policyClass(value)}`; badge.textContent = value; cell.appendChild(badge); }
-            else if (type === 'bool') { cell.textContent = value; cell.className = value === 'Yes' ? 'status-yes' : 'status-no'; }
-            else cell.textContent = value;
-            row.appendChild(cell);
-          });
-          const sourceCell = document.createElement('td');
-          const link = document.createElement('a'); link.href = service.official_source; link.target = '_blank'; link.rel = 'noopener'; link.textContent = 'Official ↗';
-          sourceCell.appendChild(link); row.appendChild(sourceCell); body.appendChild(row); count += 1;
+        const q = (search?.value || '').trim().toLowerCase();
+        const activeFilters = new Set(filterButtons.filter(b => b.classList.contains('active')).map(b => b.dataset.filter));
+        const matches = services.filter(service => {
+          const haystack = [service.name,service.category,service.free_class,service.card_requirement,service.commercial_policy,service.commercial_note,service.hard_limit,service.best_for,service.brilliant_feature].join(' ').toLowerCase();
+          if (q && !haystack.includes(q)) return false;
+          if (activeFilters.has('no-card') && service.card_requirement !== 'Not required') return false;
+          if (activeFilters.has('no-sleep') && service.sleeps) return false;
+          if (activeFilters.has('commercial') && service.commercial_policy !== 'Allowed') return false;
+          return true;
+        });
+        if (body) {
+          body.replaceChildren();
+          for (const service of matches) {
+            const row = document.createElement('tr');
+            const policy = `<span class="badge ${policyClass(service.commercial_policy)}">${esc(service.commercial_policy)}</span>`;
+            const conditions = `<div class="conditions">${conditionMarkup(service)}</div>`;
+            row.innerHTML = `
+              <td><div class="service-name">${esc(service.name)}<small>${esc(service.category)}</small></div></td>
+              <td><span class="badge blue">${esc(service.free_class)}</span></td>
+              <td>${policy}</td>
+              <td><span class="badge ${cardAlert(service.card_requirement) ? 'trap' : 'ok'}">${esc(cardLabel(service.card_requirement))}</span></td>
+              <td>${conditions}</td>
+              <td class="limit">${esc(service.hard_limit)}</td>
+              <td><span class="micro">${esc(service.last_verified)}</span></td>
+              <td><a class="source-link" href="${esc(service.official_source)}" target="_blank" rel="noopener">Official ↗</a></td>`;
+            body.appendChild(row);
+          }
         }
-        if (status) status.textContent = `${count} of ${services.length} services shown`;
+        if (mobileBody) {
+          mobileBody.replaceChildren();
+          for (const service of matches) {
+            const article = document.createElement('article');
+            article.className = `mobile-card${hasTrap(service) ? ' has-trap' : ''}`;
+            article.innerHTML = `
+              <div class="mobile-head"><div><div class="mobile-name">${esc(service.name)}</div><div class="mobile-category">${esc(service.category)} · ${esc(service.free_class)}</div></div><span class="micro">${esc(service.last_verified)}</span></div>
+              <div class="mobile-limit">${esc(service.hard_limit)}</div>
+              <div class="mobile-conditions">${conditionBadges(service)}</div>
+              <a class="mobile-source" href="${esc(service.official_source)}" target="_blank" rel="noopener">Official source ↗</a>`;
+            mobileBody.appendChild(article);
+          }
+        }
+        if (status) status.textContent = `${matches.length} of ${services.length} services shown`;
       };
-      search.addEventListener('input', render); render();
+      search?.addEventListener('input', render);
+      filterButtons.forEach(button => button.addEventListener('click', () => { button.classList.toggle('active'); render(); }));
+      render();
     } catch (error) {
-      body.innerHTML = '<tr><td colspan="9">Unable to load services.json. Check the deployed data artifact.</td></tr>';
-      if (status) status.textContent = 'Data load failed'; console.error(error);
+      if (body) body.innerHTML = '<tr><td colspan="8">Unable to load services.json. Check the deployed data artifact.</td></tr>';
+      if (status) status.textContent = 'Data load failed';
+      console.error(error);
     }
   };
   load();
@@ -306,56 +451,54 @@ def write_readme(data: dict) -> None:
     (ROOT / "README.md").write_text("\n".join(lines), encoding="utf-8")
 
 
-def write_index() -> None:
+def write_index(data: dict) -> None:
+    services = data["services"]
     nav = "".join(f'<a href="{esc(k)}.html">{esc(v)}</a>' for k, v in CATEGORIES.items())
+    count = len(services)
     index = f'''<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Free Web Hosting &amp; Cloud 2026 | Verified Free-Tier Directory</title>
-<meta name="description" content="Verified 2026 directory of free web hosting, serverless compute, managed databases, object storage, VPS and AI/data platforms. Limits, commercial policies and signup requirements are shown clearly.">
+<meta name="description" content="Verified 2026 directory of free web hosting, serverless compute, managed databases, object storage, VPS and AI/data platforms. Limits and the catch are shown together.">
 <link rel="canonical" href="https://hamidic911.github.io/free-web-hosting-guide/">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="hero"><div class="container hero-inner">
-<div class="eyebrow">Primary-source directory · Checked October 2026</div>
-<h1>Free Hosting Without the Hype.</h1>
-<p class="lead">A practical, community-maintained directory of genuinely free web hosting and cloud infrastructure. We put the catch beside the quota so you can choose by architecture, policy, and real limits.</p>
-<div class="hero-actions">
-<a class="button primary" href="#matrix">Browse verified services ↓</a>
-<button class="button theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">🌙 Dark mode</button>
+<header class="hero"><div class="container hero-grid">
+<div>
+<div class="eyebrow">Primary-source directory · checked {esc(data['metadata']['last_updated'])}</div>
+<h1>Every free host has a catch. We put it beside the quota.</h1>
+<p class="lead">A practical, community-maintained directory of free hosting and cloud services. Compare the policy, card requirement, sleep behavior, production suitability and hard limit before you deploy.</p>
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme"></button>
 </div>
+<section class="hero-tool" aria-labelledby="architectureHeading">
+<div id="architectureHeading" class="hero-tool-label">I want to build a</div>
+<div class="architecture-picker"><span>service for</span> <select id="architectureSelect" aria-label="Choose what you want to build"><option value="static">static site</option><option value="wordpress">WordPress / PHP site</option><option value="nextjs">Next.js app</option><option value="api">API</option><option value="docker">Docker app</option><option value="database">database</option><option value="storage">object storage</option><option value="vps">VPS / server</option><option value="ai">AI demo</option><option value="docs">documentation</option><option value="nocode">no-code app</option></select></div>
+<p class="hero-note">Three starting points, with their conditions visible immediately.</p>
+</section>
 </div></header>
 <nav class="nav-wrap"><div class="container nav" aria-label="Categories">{nav}</div></nav>
 <main class="container">
-<section class="card">
-<div class="section-kicker">Start here</div>
-<h2>Choose the architecture first</h2>
-<p>Then check the commercial policy, card requirement, sleep/reclaim behavior, production suitability and hard limit. A bigger quota is not automatically a better fit.</p>
-<div class="facts">
-<div class="fact"><strong>Coverage</strong><br>36 current services</div>
-<div class="fact"><strong>Static</strong><br>Cloudflare Pages · GitHub Pages · Firebase</div>
-<div class="fact"><strong>Frontend</strong><br>Netlify · Vercel Hobby</div>
-<div class="fact"><strong>Containers</strong><br>Cloud Run · Koyeb · Render</div>
-<div class="fact"><strong>Databases</strong><br>Neon · Supabase · Turso · Atlas</div>
-<div class="fact"><strong>Storage</strong><br>R2 · B2</div>
-<div class="fact"><strong>VPS</strong><br>Oracle · Google Cloud</div>
-<div class="fact"><strong>Docs / No-code</strong><br>Read the Docs · Bubble</div>
-</div>
+<section>
+<div class="section-head"><div><div class="section-kicker">Start here</div><h2>Choose by what you are building</h2></div><div class="meta-line">{count} verified services · {len(CATEGORIES)} categories</div></div>
+<div id="recommendationArea" class="architecture-results" aria-live="polite"></div>
 </section>
 <section id="matrix">
-<div class="section-kicker">Verified comparison</div>
-<h2>Service matrix</h2>
-<p id="resultStatus" class="muted small" aria-live="polite">Loading services…</p>
-<div class="tools"><input id="searchInput" type="search" placeholder="Search provider, category, database, limit, policy…" autocomplete="off" aria-label="Search verified services"></div>
-<div class="table-wrap"><table class="matrix"><thead><tr>
-<th>Service</th><th>Category</th><th>Free model</th><th>Card</th><th>Commercial</th><th>Sleeps</th><th>Production</th><th>Hard limit / catch</th><th>Source</th>
-</tr></thead><tbody id="servicesBody"></tbody></table></div>
+<div class="section-head"><div><div class="section-kicker">Verified comparison</div><h2>The conditions table</h2><p class="meta-line">The headline number is never the whole story.</p></div></div>
+<div class="filter-bar">
+<div class="search-wrap"><input id="searchInput" type="search" placeholder="Search provider, category, database, limit…" autocomplete="off" aria-label="Search verified services"></div>
+<button class="filter-btn" type="button" data-filter="no-card">No card</button>
+<button class="filter-btn" type="button" data-filter="no-sleep">Doesn’t sleep</button>
+<button class="filter-btn" type="button" data-filter="commercial">Commercial allowed</button>
+</div>
+<p id="resultStatus" class="meta-line" aria-live="polite">Loading services…</p>
+<div class="table-wrap"><table class="matrix"><thead><tr><th>Service</th><th>Free model</th><th>Commercial</th><th>Card</th><th>Conditions</th><th>Hard limit / catch</th><th>Verified</th><th>Source</th></tr></thead><tbody id="servicesBody"></tbody></table></div>
+<div id="mobileServicesBody" class="mobile-results"></div>
 </section>
 </main>
-<footer><div class="container">Canonical data: <code>services.yml</code> · Last verified: {esc('2026-10-08')} · MIT License</div></footer>
+<footer><div class="container">Official provider sources · checked dates · community-maintained · canonical data in <code>services.yml</code> · MIT License</div></footer>
 <script src="app.js"></script>
 </body>
 </html>
@@ -377,42 +520,52 @@ def write_category_pages(data: dict) -> None:
         subset = [s for s in services if s["category"] == category]
         cards = []
         for s in subset:
-            card = f"""<article class="card">
+            alerts = []
+            if s["card_requirement"] in {"Required", "Conditional"}: alerts.append(f"Card: {s['card_requirement']}")
+            if s["commercial_policy"] != "Allowed": alerts.append(f"Commercial: {s['commercial_policy']}")
+            if s["sleeps"]: alerts.append("Sleeps / pauses")
+            if not s["production_ready"]: alerts.append("Not production-ready")
+            alert_text = " · ".join(alerts) if alerts else "No major condition flag"
+            cards.append(f'''<article class="card">
+<div class="section-kicker">{esc(s['free_class'])} · verified {esc(s['last_verified'])}</div>
 <h2>{esc(s['name'])}</h2>
 <p>{esc(s['best_for'])}</p>
+<p class="limit">{esc(s['hard_limit'])}</p>
 <div class="facts">
-<div class="fact"><strong>Free model</strong><br>{esc(s['free_class'])}</div>
 <div class="fact"><strong>Card</strong><br>{esc(s['card_requirement'])}</div>
 <div class="fact"><strong>Commercial</strong><br>{esc(s['commercial_policy'])}</div>
-<div class="fact"><strong>Sleep / pause</strong><br>{'Yes' if s['sleeps'] else 'No'}</div>
-<div class="fact"><strong>Custom domain</strong><br>{'Yes' if s['custom_domain'] else 'No'}</div>
+<div class="fact"><strong>Sleeps</strong><br>{'Yes' if s['sleeps'] else 'No'}</div>
 <div class="fact"><strong>Production</strong><br>{'Yes' if s['production_ready'] else 'No'}</div>
+<div class="fact"><strong>Custom domain</strong><br>{'Yes' if s['custom_domain'] else 'No'}</div>
 </div>
-<p><strong>Limit:</strong> {esc(s['hard_limit'])}</p>
-<p><strong>Catch:</strong> {esc(s['reclaim_policy'])} {esc(s['commercial_note'])}</p>
+<div class="trap-note"><strong>Conditions:</strong> {esc(alert_text)}<br><span class="muted">Reclaim: {esc(s['reclaim_policy'])}</span></div>
 <p><strong>Feature:</strong> {esc(s['brilliant_feature'])}</p>
-<p><a href="{esc(s['official_source'])}" target="_blank" rel="noopener">Official source ↗</a> · Verified {esc(s['last_verified'])}</p>
-</article>"""
-            cards.append(card)
-        page = f"""<!doctype html>
+<p><a class="source-link" href="{esc(s['official_source'])}" target="_blank" rel="noopener">Official source ↗</a></p>
+</article>''' )
+        page = f'''<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Free {esc(title)} 2026 | Verified Limits</title>
-<meta name="description" content="Verified 2026 free {esc(title.lower())} services, limits, commercial policies, card requirements, and sleep/reclaim rules.">
+<title>Free {esc(title)} 2026 | Verified Limits &amp; Conditions</title>
+<meta name="description" content="Verified 2026 {esc(title.lower())} services with free-tier limits, card requirements, commercial policies, and sleep/reclaim conditions.">
 <link rel="canonical" href="https://hamidic911.github.io/free-web-hosting-guide/{esc(category)}.html">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="hero"><div class="container hero-inner"><div class="eyebrow">Verified category · October 2026</div><h1>Free {esc(title)} (2026)</h1><p class="lead">Provider limits and policy traps are shown directly beside each service.</p><div class="hero-actions"><a class="button primary" href="index.html">← Directory</a><button class="button theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">🌙 Dark mode</button></div></div></header>
+<header class="hero"><div class="container category-header">
+<div class="eyebrow">Category guide · checked {esc(data['metadata']['last_updated'])}</div>
+<h1>Free {esc(title)} in 2026</h1>
+<p class="lead">The important condition is shown beside the quota, not buried below it.</p>
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme"></button>
+</div></header>
 <nav class="nav-wrap"><div class="container nav" aria-label="Categories">{nav}</div></nav>
-<main class="container"><div class="section-kicker">Category guide</div>{''.join(cards)}</main>
-<footer><div class="container">Last verified: 2026-10-08 · MIT License</div></footer>
+<main class="container">{''.join(cards) if cards else '<div class="card"><p>No verified services in this category yet.</p></div>'}</main>
+<footer><div class="container">Official provider sources · checked dates · <a href="index.html">Back to directory</a> · MIT License</div></footer>
 <script src="app.js"></script>
 </body>
 </html>
-"""
+'''
         (SITE / f"{category}.html").write_text(page, encoding="utf-8")
 
 
@@ -442,7 +595,7 @@ def main() -> None:
         raise SystemExit("services.yml does not contain a services list")
     write_json(data)
     write_readme(data)
-    write_index()
+    write_index(data)
     write_category_pages(data)
     write_sitemap(data)
     (SITE / "style.css").write_text(STYLE, encoding="utf-8")

@@ -4,48 +4,44 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Free Web Hosting &amp; Cloud 2026 | Verified Free-Tier Directory</title>
-<meta name="description" content="Verified 2026 directory of free web hosting, serverless compute, managed databases, object storage, VPS and AI/data platforms. Limits, commercial policies and signup requirements are shown clearly.">
+<meta name="description" content="Verified 2026 directory of free web hosting, serverless compute, managed databases, object storage, VPS and AI/data platforms. Limits and the catch are shown together.">
 <link rel="canonical" href="https://hamidic911.github.io/free-web-hosting-guide/">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="hero"><div class="container hero-inner">
-<div class="eyebrow">Primary-source directory · Checked October 2026</div>
-<h1>Free Hosting Without the Hype.</h1>
-<p class="lead">A practical, community-maintained directory of genuinely free web hosting and cloud infrastructure. We put the catch beside the quota so you can choose by architecture, policy, and real limits.</p>
-<div class="hero-actions">
-<a class="button primary" href="#matrix">Browse verified services ↓</a>
-<button class="button theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">🌙 Dark mode</button>
+<header class="hero"><div class="container hero-grid">
+<div>
+<div class="eyebrow">Primary-source directory · checked 2026-10-08</div>
+<h1>Every free host has a catch. We put it beside the quota.</h1>
+<p class="lead">A practical, community-maintained directory of free hosting and cloud services. Compare the policy, card requirement, sleep behavior, production suitability and hard limit before you deploy.</p>
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme"></button>
 </div>
+<section class="hero-tool" aria-labelledby="architectureHeading">
+<div id="architectureHeading" class="hero-tool-label">I want to build a</div>
+<div class="architecture-picker"><span>service for</span> <select id="architectureSelect" aria-label="Choose what you want to build"><option value="static">static site</option><option value="wordpress">WordPress / PHP site</option><option value="nextjs">Next.js app</option><option value="api">API</option><option value="docker">Docker app</option><option value="database">database</option><option value="storage">object storage</option><option value="vps">VPS / server</option><option value="ai">AI demo</option><option value="docs">documentation</option><option value="nocode">no-code app</option></select></div>
+<p class="hero-note">Three starting points, with their conditions visible immediately.</p>
+</section>
 </div></header>
 <nav class="nav-wrap"><div class="container nav" aria-label="Categories"><a href="static-hosting.html">Static Hosting</a><a href="frontend-platforms.html">Frontend Platforms</a><a href="serverless-edge.html">Serverless &amp; Edge Compute</a><a href="containers-cloud.html">Containers &amp; Full-Stack Cloud</a><a href="databases-baas.html">Managed Databases &amp; BaaS</a><a href="object-storage.html">Object Storage</a><a href="free-vps.html">Free VPS &amp; Compute</a><a href="ai-gpu-apps.html">AI, GPU &amp; Data Apps</a><a href="php-traditional.html">PHP &amp; Traditional Hosting</a><a href="no-code.html">No-Code App Builders</a><a href="documentation.html">Documentation Hosting</a></div></nav>
 <main class="container">
-<section class="card">
-<div class="section-kicker">Start here</div>
-<h2>Choose the architecture first</h2>
-<p>Then check the commercial policy, card requirement, sleep/reclaim behavior, production suitability and hard limit. A bigger quota is not automatically a better fit.</p>
-<div class="facts">
-<div class="fact"><strong>Coverage</strong><br>36 current services</div>
-<div class="fact"><strong>Static</strong><br>Cloudflare Pages · GitHub Pages · Firebase</div>
-<div class="fact"><strong>Frontend</strong><br>Netlify · Vercel Hobby</div>
-<div class="fact"><strong>Containers</strong><br>Cloud Run · Koyeb · Render</div>
-<div class="fact"><strong>Databases</strong><br>Neon · Supabase · Turso · Atlas</div>
-<div class="fact"><strong>Storage</strong><br>R2 · B2</div>
-<div class="fact"><strong>VPS</strong><br>Oracle · Google Cloud</div>
-<div class="fact"><strong>Docs / No-code</strong><br>Read the Docs · Bubble</div>
-</div>
+<section>
+<div class="section-head"><div><div class="section-kicker">Start here</div><h2>Choose by what you are building</h2></div><div class="meta-line">36 verified services · 11 categories</div></div>
+<div id="recommendationArea" class="architecture-results" aria-live="polite"></div>
 </section>
 <section id="matrix">
-<div class="section-kicker">Verified comparison</div>
-<h2>Service matrix</h2>
-<p id="resultStatus" class="muted small" aria-live="polite">Loading services…</p>
-<div class="tools"><input id="searchInput" type="search" placeholder="Search provider, category, database, limit, policy…" autocomplete="off" aria-label="Search verified services"></div>
-<div class="table-wrap"><table class="matrix"><thead><tr>
-<th>Service</th><th>Category</th><th>Free model</th><th>Card</th><th>Commercial</th><th>Sleeps</th><th>Production</th><th>Hard limit / catch</th><th>Source</th>
-</tr></thead><tbody id="servicesBody"></tbody></table></div>
+<div class="section-head"><div><div class="section-kicker">Verified comparison</div><h2>The conditions table</h2><p class="meta-line">The headline number is never the whole story.</p></div></div>
+<div class="filter-bar">
+<div class="search-wrap"><input id="searchInput" type="search" placeholder="Search provider, category, database, limit…" autocomplete="off" aria-label="Search verified services"></div>
+<button class="filter-btn" type="button" data-filter="no-card">No card</button>
+<button class="filter-btn" type="button" data-filter="no-sleep">Doesn’t sleep</button>
+<button class="filter-btn" type="button" data-filter="commercial">Commercial allowed</button>
+</div>
+<p id="resultStatus" class="meta-line" aria-live="polite">Loading services…</p>
+<div class="table-wrap"><table class="matrix"><thead><tr><th>Service</th><th>Free model</th><th>Commercial</th><th>Card</th><th>Conditions</th><th>Hard limit / catch</th><th>Verified</th><th>Source</th></tr></thead><tbody id="servicesBody"></tbody></table></div>
+<div id="mobileServicesBody" class="mobile-results"></div>
 </section>
 </main>
-<footer><div class="container">Canonical data: <code>services.yml</code> · Last verified: 2026-10-08 · MIT License</div></footer>
+<footer><div class="container">Official provider sources · checked dates · community-maintained · canonical data in <code>services.yml</code> · MIT License</div></footer>
 <script src="app.js"></script>
 </body>
 </html>

@@ -1,5 +1,16 @@
 ## [2.3.1] - 2026-10-08
 
+## [2.3.2] - 2026-10-08
+
+### Visual refresh
+- Replaced the generic SaaS gradient aesthetic with a warm paper/ink/blue/orange/green design system.
+- Made provider conditions (card, commercial policy, sleep, production suitability) visible alongside the headline limit.
+- Added an architecture picker with live recommendations.
+- Added no-card, no-sleep, and commercial-allowed filters.
+- Added a mobile condition-card layout instead of a horizontally scrolling table.
+- Replaced the emoji theme control with an accessible inline SVG toggle.
+
+
 ### Visual Refresh
 - Reworked the static site with a brighter indigo/cyan/teal visual system, layered backgrounds, polished cards, badges, sticky category navigation, and improved table styling.
 - Added an accessible light/dark theme toggle across the site with local preference persistence.
