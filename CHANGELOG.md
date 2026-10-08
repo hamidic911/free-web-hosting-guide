@@ -1,3 +1,11 @@
+## [2.3.1] - 2026-10-08
+
+### Visual Refresh
+- Reworked the static site with a brighter indigo/cyan/teal visual system, layered backgrounds, polished cards, badges, sticky category navigation, and improved table styling.
+- Added an accessible light/dark theme toggle across the site with local preference persistence.
+- Improved mobile responsiveness and reduced-motion handling.
+- Kept the site dependency-free by using system fonts and plain HTML/CSS/JavaScript.
+
 ## [2.3.0] - 2026-10-08
 
 ### Expanded
